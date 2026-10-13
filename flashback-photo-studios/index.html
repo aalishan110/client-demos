@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Flashback Studios | Photography &amp; Videography in Islamabad</title>
+<meta name="description" content="Wedding, bridal, corporate event, model and family photography and videography in Islamabad and Rawalpindi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e8392b;--red2:#c92c20;--ink:#14110f;--ink2:#1d1916;--cream:#f7f1ea;--sand:#e9dfd2;--muted:#8d8379;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--ink);color:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.serif{font-family:"Cormorant Garamond",Georgia,serif}
+/* concept bar */
+.concept{background:#000;color:#bdb4a9;font-size:.78rem;text-align:center;padding:8px 16px;border-bottom:1px solid var(--line)}
+.concept b{color:#fff}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(20,17,15,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:46px;height:46px;border-radius:50%;background:var(--red);display:grid;place-items:center;text-align:center;font-family:"Cormorant Garamond",serif;font-weight:700;font-size:.62rem;line-height:1.05;color:#fff;letter-spacing:.01em}
+.brand span{font-family:"Cormorant Garamond",serif;font-size:1.35rem;font-weight:700;letter-spacing:.02em}
+nav ul{display:flex;gap:30px;list-style:none;font-size:.9rem;color:#d9d0c5}
+nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border-radius:999px;font-weight:600;font-size:.92rem;transition:.2s;border:1px solid transparent;cursor:pointer}
+.btn.red{background:var(--red);color:#fff}.btn.red:hover{background:var(--red2)}
+.btn.ghost{border-color:rgba(255,255,255,.35);color:#fff}.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.menu{display:none}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:96px 0 110px;background:
+ radial-gradient(900px 500px at 85% 10%,rgba(232,57,43,.28),transparent 60%),
+ radial-gradient(700px 420px at 0% 100%,rgba(232,57,43,.14),transparent 60%),var(--ink)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--red);font-weight:600}
+h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(2.8rem,6vw,5rem);line-height:1.02;margin:16px 0 22px;letter-spacing:-.01em}
+h1 em{font-style:italic;color:#ffb3a8}
+.lead{font-size:1.1rem;color:#d3c9be;max-width:34rem}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin:34px 0 40px}
+.stats{display:flex;gap:40px;flex-wrap:wrap;padding-top:28px;border-top:1px solid var(--line)}
+.stats div b{display:block;font-family:"Cormorant Garamond",serif;font-size:2.1rem;line-height:1;color:#fff}
+.stats div span{font-size:.8rem;color:var(--muted);letter-spacing:.04em}
+/* photo placeholders */
+.ph{position:relative;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#2a211c,#3a2a22 55%,#4b2f26);display:grid;place-items:center;color:rgba(255,255,255,.55);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:14px}
+.ph::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.12),transparent 55%)}
+.ph svg{width:34px;height:34px;margin:0 auto 10px;opacity:.7}
+.ph.a{background:linear-gradient(135deg,#3b2a24,#6a3a2e)}
+.ph.b{background:linear-gradient(135deg,#1f2230,#3a3150)}
+.ph.c{background:linear-gradient(135deg,#2d2a20,#5a4a2c)}
+.ph.d{background:linear-gradient(135deg,#2b1f28,#5c2b45)}
+.ph.e{background:linear-gradient(135deg,#1d2a29,#2f5450)}
+.ph.f{background:linear-gradient(135deg,#2a2321,#5e3b2a)}
+.hero-art{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 260px;gap:14px}
+.hero-art .ph:first-child{grid-row:span 2}
+.hero-art .ph:first-child{height:100%}
+/* sections */
+section{padding:100px 0}
+.sec-head{max-width:640px;margin-bottom:54px}
+.sec-head h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(2.1rem,4vw,3.2rem);line-height:1.1;margin:12px 0 14px}
+.sec-head p{color:#b9afa4}
+.light{background:var(--cream);color:var(--ink)}
+.light .sec-head p{color:#6e655b}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid #e6dccf;border-radius:20px;padding:30px;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(60,35,20,.12)}
+.card .ic{width:50px;height:50px;border-radius:14px;background:rgba(232,57,43,.1);color:var(--red);display:grid;place-items:center;margin-bottom:18px}
+.card h3{font-family:"Cormorant Garamond",serif;font-size:1.6rem;margin-bottom:8px}
+.card p{color:#6e655b;font-size:.95rem}
+.card a{display:inline-block;margin-top:16px;color:var(--red);font-weight:600;font-size:.9rem}
+/* portfolio */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px}
+.gallery .ph:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gallery .ph:nth-child(4){grid-row:span 2}
+.gallery .ph:nth-child(6){grid-column:span 2}
+.note{margin-top:22px;font-size:.85rem;color:var(--muted)}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+.step{padding:28px;border:1px solid var(--line);border-radius:20px;background:var(--ink2)}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:"Cormorant Garamond",serif;font-size:2.4rem;color:var(--red);display:block;line-height:1;margin-bottom:12px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.9rem;color:#b9afa4}
+/* packages */
+.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pkg{background:#fff;border:1px solid #e6dccf;border-radius:22px;padding:34px}
+.pkg.hot{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 24px 50px rgba(20,17,15,.28)}
+.pkg h3{font-family:"Cormorant Garamond",serif;font-size:1.7rem}
+.pkg .for{font-size:.88rem;color:#6e655b;margin-bottom:18px}
+.pkg.hot .for{color:#b9afa4}
+.pkg ul{list-style:none;margin-bottom:26px}
+.pkg li{padding:9px 0;border-bottom:1px solid rgba(0,0,0,.08);font-size:.93rem;display:flex;gap:10px}
+.pkg.hot li{border-color:var(--line)}
+.pkg li::before{content:"✓";color:var(--red);font-weight:700}
+.pkg .btn{width:100%;justify-content:center}
+.tag{display:inline-block;background:var(--red);color:#fff;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 12px;border-radius:999px;margin-bottom:14px}
+/* contact */
+.contact{background:radial-gradient(800px 400px at 100% 0%,rgba(232,57,43,.25),transparent 60%),var(--ink2)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.clist{list-style:none;margin-top:28px}
+.clist li{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.clist small{display:block;color:var(--muted);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.clist a:hover{color:#ffb3a8}
+form{background:#fff;color:var(--ink);padding:34px;border-radius:22px;display:grid;gap:14px}
+form h3{font-family:"Cormorant Garamond",serif;font-size:1.8rem}
+input,select,textarea{width:100%;padding:13px 15px;border:1px solid #ddd2c4;border-radius:12px;font:inherit;background:#fffdfb}
+textarea{min-height:96px;resize:vertical}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.84rem}
+.fl{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.4)}
+.wa svg{width:30px;height:30px;fill:#fff}
+@media(max-width:960px){
+ .hero-grid,.cgrid{grid-template-columns:1fr}
+ .cards,.pk{grid-template-columns:1fr}
+ .steps{grid-template-columns:1fr 1fr}
+ .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+ .gallery .ph:nth-child(1){grid-column:span 2}
+ nav ul{display:none}
+ .hero-art{grid-template-rows:170px 210px}
+ section{padding:70px 0}
+}
+@media(max-width:520px){.steps{grid-template-columns:1fr}.r2{grid-template-columns:1fr}.stats{gap:24px}.nav .btn{display:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Concept preview</b> prepared by aaliSoft for Flashback Studios. Photos shown are placeholders.</div>
+
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#top" aria-label="Flashback Studios">
+   <div class="logo">Flashback<br>Studios</div><span>Flashback Studios</span>
+  </a>
+  <nav><ul>
+   <li><a href="#services">Services</a></li>
+   <li><a href="#portfolio">Portfolio</a></li>
+   <li><a href="#process">How it works</a></li>
+   <li><a href="#packages">Packages</a></li>
+   <li><a href="#contact">Contact</a></li>
+  </ul></nav>
+  <a class="btn red" href="https://wa.me/923348641786">Book on WhatsApp</a>
+ </div>
+</header>
+
+<main id="top">
+<section class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="eyebrow">Photography &amp; Videography · Islamabad &amp; Rawalpindi</div>
+   <h1>Moments worth <em>reliving</em>, captured beautifully.</h1>
+   <p class="lead">From weddings and bridal shoots to corporate events and model portfolios, Flashback Studios turns your biggest days into photographs and films you will want to keep forever.</p>
+   <div class="cta">
+    <a class="btn red" href="#contact">Check your date</a>
+    <a class="btn ghost" href="#portfolio">View our work</a>
+   </div>
+   <div class="stats">
+    <div><b>4.9★</b><span>Google rating, 80+ reviews</span></div>
+    <div><b>8K+</b><span>Instagram community</span></div>
+    <div><b>2 cities</b><span>Islamabad &amp; Rawalpindi</span></div>
+   </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+   <div class="ph a"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Featured wedding photo</div></div>
+   <div class="ph b"><div>Couple shoot</div></div>
+   <div class="ph d"><div>Bridal portrait</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="light" id="services">
+ <div class="wrap">
+  <div class="sec-head">
+   <div class="eyebrow">What we shoot</div>
+   <h2>Photography and film for every occasion</h2>
+   <p>One team for the whole event, with photography, cinematic video and fast delivery.</p>
+  </div>
+  <div class="cards">
+   <div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.6-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.4-9 9-9 9z"/></svg></div><h3>Weddings</h3><p>Full-day coverage of baraat, nikah and walima with candid photography and cinematic highlight films.</p><a href="#contact">Ask for a quote →</a></div>
+   <div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg></div><h3>Bridal &amp; Mehndi</h3><p>Bridal portraits, mehndi and bridal shower shoots styled to look as good as the day felt.</p><a href="#contact">Ask for a quote →</a></div>
+   <div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 3-6 6-6s6 2.5 6 6M15 14c3 0 6 2 6 5"/></svg></div><h3>Couple &amp; Pre-wedding</h3><p>Relaxed, natural couple sessions in the locations you love around Islamabad and the Margalla Hills.</p><a href="#contact">Ask for a quote →</a></div>
+   <div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></div><h3>Corporate Events</h3><p>Conferences, launches, shows and sports events, covered professionally with quick turnaround.</p><a href="#contact">Ask for a quote →</a></div>
+   <div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 4-7 8-7s7 2 8 7"/></svg></div><h3>Model &amp; Fashion</h3><p>Portfolio, brand and fashion shoots with direction, lighting and retouching included.</p><a href="#contact">Ask for a quote →</a></div>
+   <div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 11h14v9H5zM12 11V7M9 7c0-2 3-3 3-5 0 2 3 3 3 5z"/></svg></div><h3>Birthdays &amp; Family</h3><p>Birthday shoots and family portraits, done in the studio or at your venue.</p><a href="#contact">Ask for a quote →</a></div>
+  </div>
+ </div>
+</section>
+
+<section id="portfolio">
+ <div class="wrap">
+  <div class="sec-head">
+   <div class="eyebrow">Portfolio</div>
+   <h2>A look at recent work</h2>
+   <p>A curated gallery your clients can browse any time of day, instead of scrolling through an Instagram feed.</p>
+  </div>
+  <div class="gallery">
+   <div class="ph a"><div>Wedding</div></div>
+   <div class="ph b"><div>Corporate event</div></div>
+   <div class="ph c"><div>Mehndi</div></div>
+   <div class="ph d"><div>Bridal</div></div>
+   <div class="ph e"><div>Couple</div></div>
+   <div class="ph f"><div>Model shoot</div></div>
+  </div>
+  <p class="note">Placeholder tiles. The finished site would show Flashback Studios' own best photographs and films, organised by category.</p>
+ </div>
+</section>
+
+<section class="light" id="process">
+ <div class="wrap">
+  <div class="sec-head">
+   <div class="eyebrow">How it works</div>
+   <h2>Booking is simple</h2>
+  </div>
+  <div class="steps" style="color:var(--cream)">
+   <div class="step"><h3>Message us</h3><p>Tell us your date, event and city on WhatsApp or the enquiry form.</p></div>
+   <div class="step"><h3>Get a quote</h3><p>We share a clear package and price based on what you need.</p></div>
+   <div class="step"><h3>We shoot</h3><p>Our team covers your event with photography and video.</p></div>
+   <div class="step"><h3>Fast delivery</h3><p>Edited photos and films delivered in an online gallery.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="packages">
+ <div class="wrap">
+  <div class="sec-head">
+   <div class="eyebrow">Packages</div>
+   <h2>Choose the coverage that fits</h2>
+   <p>Sample structure. Final package names and prices are set by Flashback Studios.</p>
+  </div>
+  <div class="pk" style="color:var(--ink)">
+   <div class="pkg"><h3>Essentials</h3><div class="for">Shoots and small events</div><ul><li>Photography session</li><li>Edited digital photos</li><li>Online gallery</li></ul><a class="btn ghost" style="color:var(--ink);border-color:#cbbfb0" href="#contact">Get a quote</a></div>
+   <div class="pkg hot"><span class="tag">Most booked</span><h3>Wedding Day</h3><div class="for">Full-day event coverage</div><ul><li>Photography and videography</li><li>Cinematic highlight film</li><li>Edited gallery and album options</li></ul><a class="btn red" href="#contact">Check your date</a></div>
+   <div class="pkg"><h3>Corporate</h3><div class="for">Events, launches and teams</div><ul><li>Event photo coverage</li><li>Short promo video</li><li>Quick turnaround</li></ul><a class="btn ghost" style="color:var(--ink);border-color:#cbbfb0" href="#contact">Get a quote</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap cgrid">
+  <div>
+   <div class="eyebrow">Contact</div>
+   <h2 class="serif" style="font-size:clamp(2.1rem,4vw,3.2rem);line-height:1.1;margin:12px 0 10px;font-weight:600">Let's plan your shoot</h2>
+   <p style="color:#b9afa4">Send us your date and we will reply with availability and a quote.</p>
+   <ul class="clist">
+    <li><div><small>WhatsApp</small><a href="https://wa.me/923348641786">0334 8641786</a></div></li>
+    <li><div><small>Phone</small><a href="tel:+923181595955">0318 1595955</a></div></li>
+    <li><div><small>Email</small><a href="mailto:flashbackphotostudio@gmail.com">flashbackphotostudio@gmail.com</a></div></li>
+    <li><div><small>Studio</small>Office 104, 1st Floor, Crown Business Center, E-11/2, Islamabad</div></li>
+    <li><div><small>Instagram</small><a href="https://www.instagram.com/flashbackphotostudios/">@flashbackphotostudios</a></div></li>
+   </ul>
+  </div>
+  <form onsubmit="event.preventDefault();alert('This is a concept preview. The live site would send this enquiry to Flashback Studios.')">
+   <h3>Check availability</h3>
+   <div class="r2"><input placeholder="Your name" required><input placeholder="Phone / WhatsApp" required></div>
+   <div class="r2">
+    <select><option>Event type</option><option>Wedding</option><option>Bridal / Mehndi</option><option>Couple shoot</option><option>Corporate event</option><option>Model shoot</option><option>Birthday / Family</option></select>
+    <input type="date">
+   </div>
+   <textarea placeholder="Tell us about your event"></textarea>
+   <button class="btn red" style="justify-content:center">Send enquiry</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap fl"><span>© 2026 Flashback Studios, Islamabad</span><span>Concept website design by <a href="https://aalisoft.com" style="color:#fff">aaliSoft</a></span></div></footer>
+
+<a class="wa" href="https://wa.me/923348641786" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M20.5 3.5A11 11 0 003.2 17.2L2 22l4.9-1.3A11 11 0 1020.5 3.5zM12 20a8.9 8.9 0 01-4.5-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.9 8.9 0 1112 20zm4.9-6.7c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.9 1.1-.3.2-.6.1a7.3 7.3 0 01-3.6-3.1c-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.8 11.9 11.9 0 004.6 4c1.7.7 2.4.8 3.2.7a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.2-1.3c0-.1-.2-.2-.5-.3z"/></svg></a>
+</body>
+</html>
