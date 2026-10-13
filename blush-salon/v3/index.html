@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Blush Salon by Kiran Shah | Beauty Salon &amp; Academy, Satellite Town Rawalpindi</title>
+<meta name="description" content="Blush Salon by Kiran Shah. Makeup, skin, hair, lash extensions, nails, PMU and training in Satellite Town, Rawalpindi.">
+<link rel="icon" href="../img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+<style>
+:root{
+  --charcoal:#1d1618; --maroon:#7a2e4a; --maroon-d:#5f2038; --gold:#c4952b;
+  --white:#fff; --grey:#f5f2f0; --line:#e5dfdb; --text:#2b2326; --muted:#6c6266;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font:400 16px/1.7 "Manrope",system-ui,sans-serif;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:"Marcellus",Georgia,serif;font-weight:400;line-height:1.15;color:var(--charcoal)}
+h2{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+.btn{display:inline-block;padding:15px 28px;border-radius:3px;font:600 14.5px/1 "Manrope",sans-serif;letter-spacing:.02em;transition:background .2s,color .2s,border-color .2s}
+.btn-primary{background:var(--maroon);color:#fff}
+.btn-primary:hover{background:var(--maroon-d)}
+.btn-outline{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.btn-outline:hover{background:#fff;color:var(--charcoal)}
+.btn-dark{border:1.5px solid var(--charcoal);color:var(--charcoal)}
+.btn-dark:hover{background:var(--charcoal);color:#fff}
+
+/* utility bar + header */
+.top{background:var(--charcoal);color:#e9dfe0;font-size:13.5px}
+.top .wrap{display:flex;justify-content:space-between;gap:20px;padding:9px 0;flex-wrap:wrap}
+.top a:hover{color:var(--gold)}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:58px;height:58px;border-radius:50%;box-shadow:0 0 0 1px var(--line)}
+.brand b{display:block;font:400 1.35rem/1.1 "Marcellus",serif;color:var(--charcoal)}
+.brand small{font-size:12.5px;color:var(--muted);letter-spacing:.02em}
+.menu{display:flex;gap:30px;font-size:15px;font-weight:500}
+.menu a{padding:8px 0;border-bottom:2px solid transparent}
+.menu a:hover{border-color:var(--gold)}
+
+/* hero */
+.hero{position:relative;background:var(--charcoal);color:#fff;overflow:hidden}
+.hero-img{position:absolute;inset:0 0 0 34%;background:url(img/studio.jpg) 30% 50%/cover no-repeat}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--charcoal) 0%,rgba(29,22,24,.55) 22%,rgba(29,22,24,0) 55%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,520px) 1fr;min-height:clamp(520px,74vh,680px);align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.2rem,4.2vw,3.5rem);margin-bottom:20px}
+.hero p{font-size:18px;color:#e6dcdc;max-width:30em}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.rating{display:flex;align-items:center;gap:12px;margin-top:34px;font-size:14.5px;color:#d8cccd}
+.rating b{font:400 1.7rem/1 "Marcellus",serif;color:#fff}
+.stars{color:var(--gold);letter-spacing:2px}
+
+/* info strip */
+.strip{background:#fff;border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:24px 22px;border-left:1px solid var(--line)}
+.strip div:first-child{border-left:0;padding-left:0}
+.strip small{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--maroon);margin-bottom:4px}
+.strip span{font-size:15px}
+
+section{padding:96px 0}
+.alt{background:var(--grey)}
+.title{max-width:640px;margin-bottom:48px}
+.title p{color:var(--muted);margin-top:14px}
+
+/* services */
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.svc-img{height:100%;min-height:520px;background:url(img/floor.jpg) 40% 50%/cover}
+.menu-list{list-style:none}
+.menu-list li{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.menu-list li:first-child{border-top:1px solid var(--line)}
+.menu-list h3{font-size:1.4rem;margin-bottom:2px}
+.menu-list p{font-size:15px;color:var(--muted)}
+.menu-list a{align-self:center;white-space:nowrap;font-size:14px;font-weight:600;color:var(--maroon)}
+.menu-list a:hover{text-decoration:underline}
+
+/* studio gallery */
+.studio-grid{display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:260px 260px;gap:16px}
+.studio-grid img{width:100%;height:100%;object-fit:cover}
+.studio-grid .a{grid-row:1/3}
+
+/* work */
+.work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.work-grid img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.work-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:28px;flex-wrap:wrap;color:var(--muted)}
+.work-foot a{color:var(--maroon);font-weight:600}
+
+/* academy */
+.academy{background:var(--maroon);color:#fff;padding:0}
+.academy .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;width:100%;max-width:none}
+.academy-img{min-height:460px;background:url(img/lounge.jpg) 50% 40%/cover}
+.academy-copy{padding:80px clamp(24px,6vw,96px);max-width:640px;align-self:center}
+.academy h2{color:#fff;margin-bottom:18px}
+.academy p{color:#f0dde4;margin-bottom:12px}
+.academy .btn{margin-top:22px;background:#fff;color:var(--maroon)}
+.academy .btn:hover{background:var(--gold);color:var(--charcoal)}
+
+/* reviews */
+.rev{display:grid;grid-template-columns:260px 1fr;gap:56px;align-items:start}
+.score b{font:400 5rem/1 "Marcellus",serif;color:var(--charcoal);display:block}
+.score .stars{display:block;margin:6px 0 4px}
+.score span{font-size:14.5px;color:var(--muted)}
+.rev-list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rev-list figure{border-top:3px solid var(--gold);padding-top:18px}
+.rev-list p{font-size:16.5px;color:var(--text)}
+.rev-list cite{display:block;margin-top:14px;font-style:normal;font-size:13.5px;color:var(--muted);font-weight:600}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact dl{margin:28px 0 32px}
+.contact dt{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--maroon);margin-top:20px}
+.contact dd{font-size:17px}
+.contact .btns{display:flex;gap:12px;flex-wrap:wrap}
+.shop{position:relative}
+.shop img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 70%}
+.shop figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+.map{height:380px;background:var(--grey);position:relative;border:1px solid var(--line)}
+.map a{position:absolute;inset:0;display:grid;place-items:center;color:var(--maroon);font-weight:600}
+.map iframe{position:relative;width:100%;height:100%;border:0}
+
+footer{background:var(--charcoal);color:#cdbfc2;padding:60px 0 28px;font-size:15px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
+.foot h4{font:400 1.15rem/1.2 "Marcellus",serif;color:#fff;margin-bottom:14px}
+.foot ul{list-style:none}
+.foot li{padding:3px 0}
+.foot a:hover{color:var(--gold)}
+.foot .brand b{color:#fff}
+.foot .brand small{color:#a89a9e}
+.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:44px;padding-top:20px;border-top:1px solid #3a2f32;font-size:13.5px;color:#a89a9e}
+.legal a{color:var(--gold)}
+
+@media (max-width:980px){
+  .menu{display:none}
+  .hero-img{inset:0}
+  .hero-img::after{background:linear-gradient(180deg,rgba(29,22,24,.55),rgba(29,22,24,.88))}
+  .hero .wrap{grid-template-columns:1fr;min-height:560px}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .strip div:nth-child(3){border-left:0;padding-left:0}
+  .strip div:nth-child(n+3){border-top:1px solid var(--line)}
+  .svc,.contact{grid-template-columns:1fr;gap:40px}
+  .svc-img{min-height:340px}
+  .work-grid{grid-template-columns:1fr 1fr}
+  .academy .wrap{grid-template-columns:1fr}
+  .academy-img{min-height:320px}
+  .academy-copy{padding:56px 24px;max-width:none}
+  .rev{grid-template-columns:1fr;gap:32px}
+  .rev-list{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr 1fr}
+  .foot>div:first-child{grid-column:1/-1}
+}
+@media (max-width:620px){
+  section{padding:68px 0}
+  .top .wrap>span:last-child{display:none}
+  .nav{height:72px}
+  .brand img{width:48px;height:48px}
+  .brand small{display:none}
+  .nav .btn{padding:12px 16px;font-size:13.5px}
+  .strip .wrap{grid-template-columns:1fr}
+  .strip div{border-left:0!important;padding-left:0!important;border-top:1px solid var(--line)}
+  .strip div:first-child{border-top:0}
+  .studio-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .studio-grid .a{grid-row:auto}
+  .studio-grid img{height:260px}
+  .hero .actions .btn{flex:1;text-align:center}
+  .foot{grid-template-columns:1fr}
+  .menu-list li{flex-direction:column;gap:6px}
+  .menu-list a{align-self:flex-start}
+  .brand b{font-size:1.15rem}
+  .nav .btn{padding:11px 14px;font-size:13px}
+  .top .wrap{font-size:12.5px}
+}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <span>D-436, Ground Floor, D Block, Satellite Town Commercial Market, Rawalpindi</span>
+    <span>Open until 9 PM &nbsp;&middot;&nbsp; <a href="tel:+923147801112">0314 7801112</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img src="../img/logo.jpg" alt="Blush Salon logo" width="58" height="58">
+      <span><b>Blush Salon</b><small>by Kiran Shah</small></span>
+    </a>
+    <nav class="menu" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#studio">Our Studio</a>
+      <a href="#work">Our Work</a>
+      <a href="#academy">Academy</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/923147801112?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Blush%20Salon." target="_blank" rel="noopener">Book Appointment</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="hero-img" role="img" aria-label="Inside Blush Salon: gold Blush Salon sign, styling chairs and mirrors"></div>
+    <div class="wrap">
+      <div>
+        <h1>Skin, makeup, hair and lashes in the heart of Satellite Town.</h1>
+        <p>A full-service beauty salon and training academy led by certified artist Kiran Shah.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/923147801112?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Blush%20Salon." target="_blank" rel="noopener">Book on WhatsApp</a>
+          <a class="btn btn-outline" href="#services">Our services</a>
+        </div>
+        <div class="rating"><b>4.9</b><div><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>292 reviews on Google</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div><small>Address</small><span>D-436, D Block, Satellite Town</span></div>
+      <div><small>Call</small><span><a href="tel:+923147801112">0314 7801112</a></span></div>
+      <div><small>Hours</small><span>Open until 9 PM</span></div>
+      <div><small>Instagram</small><span><a href="https://www.instagram.com/blushbykiranshah/" target="_blank" rel="noopener">@blushbykiranshah</a></span></div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap svc">
+      <div class="svc-img" role="img" aria-label="Styling stations at Blush Salon"></div>
+      <div>
+        <div class="title" style="margin-bottom:28px"><h2>Services</h2><p>Message us on WhatsApp for current prices and to book your slot.</p></div>
+        <ul class="menu-list">
+          <li><div><h3>Bridal &amp; party makeup</h3><p>Makeup for weddings, parties and special occasions.</p></div><a href="https://wa.me/923147801112?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20makeup%20at%20Blush%20Salon." target="_blank" rel="noopener">Enquire</a></li>
+          <li><div><h3>Lash extensions</h3><p>Extension sets applied by a certified lash artist.</p></div><a href="https://wa.me/923147801112?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20lash%20extensions%20at%20Blush%20Salon." target="_blank" rel="noopener">Enquire</a></li>
+          <li><div><h3>Nails</h3><p>Manicure, pedicure and nail art.</p></div><a href="https://wa.me/923147801112?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20nails%20at%20Blush%20Salon." target="_blank" rel="noopener">Enquire</a></li>
+          <li><div><h3>PMU &amp; microshading</h3><p>Semi-permanent brows and lips.</p></div><a href="https://wa.me/923147801112?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20PMU%20at%20Blush%20Salon." target="_blank" rel="noopener">Enquire</a></li>
+          <li><div><h3>Skin &amp; facials</h3><p>Hydra facials and skin treatments.</p></div><a href="https://wa.me/923147801112?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20facials%20at%20Blush%20Salon." target="_blank" rel="noopener">Enquire</a></li>
+          <li><div><h3>Hair</h3><p>Colour, highlights, extensions and nanoplastia.</p></div><a href="https://wa.me/923147801112?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20hair%20services%20at%20Blush%20Salon." target="_blank" rel="noopener">Enquire</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="studio" class="alt">
+    <div class="wrap">
+      <div class="title"><h2>Our studio</h2><p>A clean, private space on D Block, Satellite Town, built around comfort.</p></div>
+      <div class="studio-grid">
+        <img class="a" src="img/studio.jpg" alt="Gold Blush Salon sign above the styling area" loading="lazy" style="object-position:35% 50%">
+        <img src="img/reception.jpg" alt="Reception counter with product display" loading="lazy" style="object-position:50% 55%">
+        <img src="img/storefront.jpg" alt="Blush Salon storefront on D Block with pink signboard" loading="lazy" style="object-position:50% 72%">
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="title"><h2>Recent work</h2><p>A selection of looks created by Kiran Shah and the Blush team.</p></div>
+      <div class="work-grid">
+        <img src="../img/glam.jpg" alt="Evening glam makeup" loading="lazy" style="object-position:50% 25%">
+        <img src="../img/bridal.jpg" alt="Soft glam makeup with sleek hair" loading="lazy" style="object-position:50% 40%">
+        <img src="../img/party.jpg" alt="Party makeup with long waves" loading="lazy" style="object-position:50% 15%">
+        <img src="../img/portrait.jpg" alt="Natural-finish makeup" loading="lazy" style="object-position:50% 25%">
+      </div>
+      <div class="work-foot"><span>See more on Instagram &mdash; 2,800+ followers</span><a href="https://www.instagram.com/blushbykiranshah/" target="_blank" rel="noopener">@blushbykiranshah</a></div>
+    </div>
+  </section>
+
+  <section id="academy" class="academy">
+    <div class="wrap">
+      <div class="academy-img" role="img" aria-label="Lounge area at Blush Salon"></div>
+      <div class="academy-copy">
+        <h2>Blush Academy</h2>
+        <p>Blush also runs an academy for aspiring beauty professionals, with training in lash extensions, nails, PMU and makeup.</p>
+        <p>Message us to ask about the next course and enrolment.</p>
+        <a class="btn" href="https://wa.me/923147801112?text=Assalam%20o%20Alaikum%2C%20please%20share%20details%20about%20the%20Blush%20Academy%20courses." target="_blank" rel="noopener">Ask about courses</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap rev">
+      <div class="score"><b>4.9</b><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>Based on 292 Google reviews</span></div>
+      <div class="rev-list">
+        <figure><p>&ldquo;First time I visit Blush Salon. I feel comfortable and beautiful setup.&rdquo;</p><cite>Google review</cite></figure>
+        <figure><p>&ldquo;I honestly couldn&rsquo;t have chosen a better place to start. From the moment I walked in, the vibe was warm, welcoming and so relaxing.&rdquo;</p><cite>Misbah W., Google review</cite></figure>
+        <figure><p>&ldquo;The services here are worth it. The staff is very co-operative.&rdquo;</p><cite>Noureen S., Google review</cite></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="alt">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <h2>Visit Blush Salon</h2>
+          <dl>
+            <dt>Address</dt><dd>D-436, Ground Floor, D Block,<br>Satellite Town Commercial Market, Rawalpindi</dd>
+            <dt>Phone &amp; WhatsApp</dt><dd><a href="tel:+923147801112">0314 7801112</a> &nbsp;&middot;&nbsp; Landline (051) 6132251</dd>
+            <dt>Hours</dt><dd>Open until 9 PM</dd>
+            <dt>Find us</dt><dd>Look for the pink Blush Salon signboard on D Block.</dd>
+          </dl>
+          <div class="btns">
+            <a class="btn btn-primary" href="https://wa.me/923147801112?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Blush%20Salon." target="_blank" rel="noopener">Book on WhatsApp</a>
+            <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=33.64034,73.0708397" target="_blank" rel="noopener">Get directions</a>
+          </div>
+        </div>
+        <div class="map side"><a href="https://www.google.com/maps/search/?api=1&query=33.64034,73.0708397" target="_blank" rel="noopener">Open in Google Maps</a><iframe title="Blush Salon on Google Maps" src="https://maps.google.com/maps?q=33.64034,73.0708397&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top"><img src="../img/logo.jpg" alt="Blush Salon logo" width="58" height="58"><span><b>Blush Salon</b><small>by Kiran Shah</small></span></a>
+        <p style="margin-top:16px;max-width:26em">Skin, makeup, hair, lash extensions, nails, PMU and training in Satellite Town, Rawalpindi.</p>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="#services">Services</a></li><li><a href="#studio">Our studio</a></li><li><a href="#work">Our work</a></li><li><a href="#academy">Academy</a></li><li><a href="#reviews">Reviews</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+923147801112">0314 7801112</a></li><li>(051) 6132251</li><li>D-436, D Block, Satellite Town</li><li><a href="https://www.instagram.com/blushbykiranshah/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+    </div>
+    <div class="legal"><span>&copy; Blush Salon by Kiran Shah</span><span>Website concept by <a href="https://aalisoft.com" target="_blank" rel="noopener">aaliSoft</a></span></div>
+  </div>
+</footer>
+
+</body>
+</html>
