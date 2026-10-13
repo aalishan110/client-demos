@@ -55,6 +55,9 @@ h1 em{font-style:italic;color:#ffb3a8}
 .ph.d{background:linear-gradient(135deg,#2b1f28,#5c2b45)}
 .ph.e{background:linear-gradient(135deg,#1d2a29,#2f5450)}
 .ph.f{background:linear-gradient(135deg,#2a2321,#5e3b2a)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.ph:hover img{transform:scale(1.05)}
+.ph .cap{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;text-align:left}
 .hero-art{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 260px;gap:14px}
 .hero-art .ph:first-child{grid-row:span 2}
 .hero-art .ph:first-child{height:100%}
@@ -73,10 +76,9 @@ section{padding:100px 0}
 .card p{color:#6e655b;font-size:.95rem}
 .card a{display:inline-block;margin-top:16px;color:var(--red);font-weight:600;font-size:.9rem}
 /* portfolio */
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:14px}
 .gallery .ph:nth-child(1){grid-column:span 2;grid-row:span 2}
 .gallery .ph:nth-child(4){grid-row:span 2}
-.gallery .ph:nth-child(6){grid-column:span 2}
 .note{margin-top:22px;font-size:.85rem;color:var(--muted)}
 /* process */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
@@ -127,7 +129,7 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 </style>
 </head>
 <body>
-<div class="concept"><b>Concept preview</b> prepared by aaliSoft for Flashback Studios. Photos shown are placeholders.</div>
+<div class="concept"><b>Concept preview</b> prepared by aaliSoft for Flashback Studios. Portfolio images are Flashback Studios' own work.</div>
 
 <header>
  <div class="wrap nav">
@@ -163,9 +165,9 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
    </div>
   </div>
   <div class="hero-art" aria-hidden="true">
-   <div class="ph a"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Featured wedding photo</div></div>
-   <div class="ph b"><div>Couple shoot</div></div>
-   <div class="ph d"><div>Bridal portrait</div></div>
+   <div class="ph a"><img src="images/bridal-red.jpg" alt="" style="object-position:50% 40%"></div>
+   <div class="ph b"><img src="images/couple-red-1.jpg" alt=""></div>
+   <div class="ph d"><img src="images/mehndi-rail.jpg" alt=""></div>
   </div>
  </div>
 </section>
@@ -196,14 +198,16 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
    <p>A curated gallery your clients can browse any time of day, instead of scrolling through an Instagram feed.</p>
   </div>
   <div class="gallery">
-   <div class="ph a"><div>Wedding</div></div>
-   <div class="ph b"><div>Corporate event</div></div>
-   <div class="ph c"><div>Mehndi</div></div>
-   <div class="ph d"><div>Bridal</div></div>
-   <div class="ph e"><div>Couple</div></div>
-   <div class="ph f"><div>Model shoot</div></div>
+   <a class="ph a" href="#contact"><img src="images/couple-red-1.jpg" alt="Wedding couple portrait" loading="lazy"><span class="cap">Wedding</span></a>
+   <a class="ph b" href="#contact"><img src="images/mehndi-1.jpg" alt="Mehndi portrait" loading="lazy"><span class="cap">Mehndi</span></a>
+   <a class="ph c" href="#contact"><img src="images/model-1.jpg" alt="Model shoot" loading="lazy"><span class="cap">Model shoot</span></a>
+   <a class="ph d" href="#contact"><img src="images/bridal-red.jpg" alt="Bridal portrait" loading="lazy"><span class="cap">Bridal</span></a>
+   <a class="ph e" href="#contact"><img src="images/couple-grey-1.jpg" alt="Couple shoot" loading="lazy"><span class="cap">Couple</span></a>
+   <a class="ph f" href="#contact"><img src="images/nikah-arch.jpg" alt="Nikah portrait" loading="lazy"><span class="cap">Nikah</span></a>
+   <a class="ph a" href="#contact"><img src="images/portrait-flower.jpg" alt="Portrait" loading="lazy"><span class="cap">Portrait</span></a>
+   <a class="ph b" href="#contact"><img src="images/wedding-confetti.jpg" alt="Wedding entry" loading="lazy"><span class="cap">Event coverage</span></a>
   </div>
-  <p class="note">Placeholder tiles. The finished site would show Flashback Studios' own best photographs and films, organised by category.</p>
+  <p class="note">Selected work from the Flashback Studios Instagram. The live site would add full albums, wedding films and a booking calendar.</p>
  </div>
 </section>
 
