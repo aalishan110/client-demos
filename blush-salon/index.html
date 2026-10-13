@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Blush Salon | Makeup, Lashes, Nails &amp; PMU in Satellite Town, Rawalpindi</title>
+<meta name="description" content="Blush Salon by Kiran Shah. Bridal and party makeup, lash extensions, nails, PMU and skin care in Satellite Town, Rawalpindi. 4.9 stars on Google.">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2a1a17; --muted:#6f5d58; --plum:#6b2a4d; --plum-d:#531f3a; --rose:#d9a5a8;
+  --blush:#f5e8e4; --cream:#fcf8f4; --line:#e9dcd6; --white:#fff;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 17px/1.65 var(--sans);font-variant-numeric:lining-nums;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.eyebrow{font:500 12.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--plum)}
+h1,h2,h3,.facts strong,.chip b,.score b{font-variant-numeric:lining-nums}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2.1rem,4.4vw,3.2rem)}
+em{font-style:italic;color:var(--plum)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font:500 15px/1 var(--sans);letter-spacing:.02em;transition:.25s}
+.btn-primary{background:var(--plum);color:#fff}
+.btn-primary:hover{background:var(--plum-d);transform:translateY(-1px)}
+.btn-ghost{border:1px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-light{background:#fff;color:var(--plum)}
+.btn-light:hover{background:var(--blush)}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(252,248,244,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:54px;height:54px;border-radius:50%;box-shadow:0 0 0 1px var(--line)}
+.brand span{font:600 11px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.links{display:flex;gap:34px;font-size:15px}
+.links a{position:relative;padding:6px 0}
+.links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--plum);transition:.25s}
+.links a:hover::after{width:100%}
+.nav .btn{padding:12px 22px;font-size:14px}
+
+/* hero */
+.hero{padding:64px 0 90px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-12%;top:-20%;width:62%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--blush) 0%,rgba(245,232,228,0) 70%);z-index:0}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+.hero h1{font-size:clamp(3rem,6.4vw,5.6rem);margin:22px 0 24px}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:30em}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.facts{display:flex;gap:40px;margin-top:52px;padding-top:28px;border-top:1px solid var(--line)}
+.facts strong{display:block;font:500 1.9rem/1.1 var(--serif);color:var(--ink)}
+.facts strong.num,.chip b,.score b{font-family:var(--sans);font-weight:500}
+.facts span{font-size:13.5px;color:var(--muted);letter-spacing:.02em}
+.arch{position:relative;justify-self:end;width:min(440px,100%)}
+.arch .frame{border-radius:220px 220px 18px 18px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 60px -30px rgba(80,30,50,.45)}
+.arch .frame img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.arch::after{content:"";position:absolute;inset:-14px -14px auto auto;width:100%;height:100%;border:1px solid var(--rose);border-radius:234px 234px 24px 24px;z-index:-1;transform:translate(-2px,0)}
+.chip{position:absolute;left:-34px;bottom:46px;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 18px 40px -18px rgba(60,20,40,.35);display:flex;gap:12px;align-items:center}
+.chip b{font:600 1.5rem/1 var(--sans);color:var(--plum)}
+.chip small{display:block;font-size:12.5px;color:var(--muted);line-height:1.3}
+.stars{color:#c48a3a;letter-spacing:2px;font-size:13px}
+
+/* services strip */
+.strip{background:var(--ink);color:#f4e6e2;overflow:hidden;padding:18px 0}
+.strip ul{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:12px 46px;padding:0;font:italic 500 1.35rem/1.2 var(--serif)}
+.strip li::before{content:"\2726";color:var(--rose);margin-right:14px;font-style:normal;font-size:.8em}
+
+/* services */
+section{padding:104px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:54px}
+.head p{max-width:27em;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px 30px 32px;transition:.3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -30px rgba(80,30,50,.4);border-color:var(--rose)}
+.ico{width:46px;height:46px;border-radius:50%;background:var(--blush);display:grid;place-items:center;margin-bottom:22px}
+.ico svg{width:22px;height:22px;stroke:var(--plum);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.8rem;margin-bottom:10px}
+.card p{font-size:15.5px;color:var(--muted)}
+
+/* work */
+.work{background:var(--blush)}
+.gallery{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:20px;align-items:stretch}
+.gallery figure{border-radius:18px;overflow:hidden;position:relative;min-height:380px}
+.gallery figure:nth-child(2){margin-top:44px}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:16px;bottom:16px;background:rgba(252,248,244,.92);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:500}
+.ig{display:flex;justify-content:space-between;align-items:center;margin-top:34px;flex-wrap:wrap;gap:16px;color:var(--muted)}
+.ig a{border-bottom:1px solid var(--plum);color:var(--plum);font-weight:500}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.about-panel{background:var(--blush);border-radius:18px;padding:56px 40px;text-align:center;aspect-ratio:5/6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;position:relative}
+.about-panel::before{content:"";position:absolute;inset:14px;border:1px solid var(--rose);border-radius:12px;pointer-events:none}
+.about-panel img{width:150px;height:150px;border-radius:50%;box-shadow:0 14px 34px -16px rgba(80,30,50,.5)}
+.about-panel .cred{font:500 12.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--plum);margin:0}
+.about-panel ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;font:italic 500 1.45rem/1.3 var(--serif)}
+.about-panel li+li::before{content:"\2726";color:var(--rose);font-style:normal;font-size:.6em;margin-right:18px;vertical-align:middle}
+.about-img{border-radius:18px;overflow:hidden;aspect-ratio:5/6}
+.about-img img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.about p{color:var(--muted);margin:22px 0}
+.points{list-style:none;padding:0;margin:26px 0 34px;display:grid;gap:14px}
+.points li{display:flex;gap:14px;align-items:flex-start}
+.points svg{flex:none;width:22px;height:22px;margin-top:3px;stroke:var(--plum);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* reviews */
+.reviews{background:var(--ink);color:#f7ece8}
+.reviews .eyebrow{color:var(--rose)}
+.reviews em{color:var(--rose)}
+.score{display:flex;align-items:center;gap:22px;margin-top:20px}
+.score b{font:500 3.6rem/1 var(--sans)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+.quote{border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:30px}
+.quote p{font:italic 500 1.35rem/1.45 var(--serif)}
+.quote cite{display:block;margin-top:20px;font:400 13px/1 var(--sans);font-style:normal;color:#cdb6b0;letter-spacing:.06em}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.tags span{padding:9px 16px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:13.5px;color:#e8d5d0}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+.info{display:grid;gap:26px;margin:34px 0 36px}
+.info div{padding-bottom:22px;border-bottom:1px solid var(--line)}
+.info dt{font:600 11.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--plum);margin-bottom:9px}
+.info dd{margin:0;font-size:18px}
+.info dd small{color:var(--muted);font-size:14.5px}
+.map{border-radius:18px;overflow:hidden;min-height:420px;border:1px solid var(--line);background:var(--blush);position:relative}
+.map a.fallback{position:absolute;inset:0;display:grid;place-items:center;font:500 1.4rem/1.3 var(--serif);color:var(--plum);text-align:center;padding:24px}
+.map iframe{position:relative;z-index:1}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;filter:saturate(.85)}
+
+/* cta band + footer */
+.band{background:var(--plum);color:#fff;padding:80px 0;text-align:center}
+.band h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin-bottom:16px}
+.band p{color:#ecd3de;margin-bottom:34px}
+footer{padding:44px 0;font-size:14px;color:var(--muted)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot .brand img{width:44px;height:44px}
+.foot a{color:var(--plum)}
+
+@media (max-width:980px){
+  .links{display:none}
+  .hero-grid,.about-grid,.visit-grid{grid-template-columns:1fr;gap:48px}
+  .arch{justify-self:center}
+  .chip{left:-8px}
+  .cards,.quotes{grid-template-columns:1fr 1fr}
+  .head{flex-direction:column;align-items:flex-start;gap:16px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:72px 0}
+  .brand span{display:none}
+  .nav .btn{padding:11px 18px}
+  .hero{padding:40px 0 64px}
+  .facts{gap:22px;flex-wrap:wrap}
+  .cards,.quotes{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr}
+  .gallery figure:nth-child(2){margin-top:0}
+  .gallery figure{min-height:340px}
+  .cta .btn{width:100%;justify-content:center}
+  .chip{left:10px;bottom:-22px}
+  .foot{flex-direction:column;align-items:flex-start}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Blush Salon home">
+      <img src="img/logo.jpg" alt="Blush Salon logo" width="54" height="54">
+      <span>Satellite Town<br>Rawalpindi</span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#about">Academy</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/923147801112?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Blush%20Salon." target="_blank" rel="noopener">Book on WhatsApp</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:90px">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Blush Salon &middot; by Kiran Shah</span>
+      <h1>Your most <em>confident</em> look, done with care.</h1>
+      <p class="lead">Bridal and party makeup, lash extensions, nails, PMU and skin care from a certified artist, in the heart of Satellite Town.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://wa.me/923147801112?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Blush%20Salon." target="_blank" rel="noopener">Book your appointment</a>
+        <a class="btn btn-ghost" href="#work">See our work</a>
+      </div>
+      <div class="facts">
+        <div><strong class="num">4.9</strong><span>Rating from 292 Google reviews</span></div>
+        <div><strong>Certified</strong><span>Lash, nails, PMU &amp; makeup artist</span></div>
+        <div><strong>D Block</strong><span>Satellite Town Commercial Market</span></div>
+      </div>
+    </div>
+    <div class="arch">
+      <div class="frame"><img src="img/glam.jpg" alt="Client with glam evening makeup by Blush Salon" width="640" height="800" fetchpriority="high"></div>
+      <div class="chip">
+        <b>4.9</b>
+        <div><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><small>Loved by clients<br>across Rawalpindi</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-label="What we do">
+  <ul>
+    <li>Bridal &amp; party makeup</li><li>Lash extensions</li><li>Nails</li><li>PMU &amp; microshading</li><li>Hair &amp; skin</li>
+  </ul>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Services</span><h2 style="margin-top:16px">Everything for the <em>complete</em> look</h2></div>
+      <p>From a quiet first manicure to your wedding day, every appointment is unhurried and tailored to you.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3c2 3 5 4.5 5 8a5 5 0 0 1-10 0c0-3.500 3-5 5-8Z"/><path d="M9 21h6"/></svg></div>
+        <h3>Makeup artistry</h3><p>Bridal, party and everyday looks, built around your features, outfit and the lighting of your event.</p>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12c3-4 15-4 18 0"/><path d="M5 14l-1.500 3M9 15l-.700 3M13 15.500V19M17 15l.7 3M20 14l1.500 3"/></svg></div>
+        <h3>Lash extensions</h3><p>Classic to volume sets, applied with care for a soft, natural lift that lasts.</p>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M8 21v-7a4 4 0 0 1 8 0v7"/><path d="M10 10V4M14 10V5"/></svg></div>
+        <h3>Nails</h3><p>Manicure, pedicure and nail art in a calm, spotless setting.</p>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 18c4 2 12 2 16 0"/><path d="M5 13c3-4 11-4 14 0"/><path d="M12 6v3"/></svg></div>
+        <h3>PMU &amp; microshading</h3><p>Brows and lips with soft, natural-looking pigment from a certified PMU artist.</p>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8.500 14c1 1.500 5.500 1.500 7 0M9 10h.01M15 10h.01"/></svg></div>
+        <h3>Skin &amp; facials</h3><p>Hydra facials and skin treatments to refresh and brighten before a big day or just because.</p>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M6 3v9a6 6 0 0 0 12 0V3"/><path d="M9 21h6"/></svg></div>
+        <h3>Hair</h3><p>Colour, highlights, extensions and smoothing treatments such as nanoplastia.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="work">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Our work</span><h2 style="margin-top:16px">Real clients, <em>real</em> results</h2></div>
+      <p>A glimpse of recent looks from our chair. More on Instagram every week.</p>
+    </div>
+    <div class="gallery">
+      <figure><img src="img/bridal.jpg" alt="Soft glam makeup with sleek ponytail" loading="lazy" style="object-position:50% 45%"><figcaption>Soft glam</figcaption></figure>
+      <figure><img src="img/party.jpg" alt="Party makeup with long waves" loading="lazy" style="object-position:50% 15%"><figcaption>Party look</figcaption></figure>
+      <figure><img src="img/portrait.jpg" alt="Natural-finish makeup portrait" loading="lazy" style="object-position:50% 25%"><figcaption>Everyday polish</figcaption></figure>
+    </div>
+    <div class="ig"><span>2,800+ people follow our work</span><a href="https://www.instagram.com/blushbykiranshah/" target="_blank" rel="noopener">@blushbykiranshah on Instagram</a></div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap about-grid">
+    <div class="about-panel">
+      <img src="img/logo.jpg" alt="Blush Salon logo" width="150" height="150">
+      <p class="cred">Certified Artist</p>
+      <ul><li>Lash</li><li>Nails</li><li>PMU</li><li>Makeup Artist</li><li>Academy</li></ul>
+    </div>
+    <div>
+      <span class="eyebrow">Blush Academy</span>
+      <h2 style="margin-top:16px">Learn the craft from a <em>certified</em> artist</h2>
+      <p>Alongside the salon, Blush runs an academy for aspiring beauty professionals. Message us to ask about upcoming courses and enrolment.</p>
+      <ul class="points">
+        <li><svg viewBox="0 0 24 24"><path d="M4 12.500l5 5L20 6.500"/></svg><span>Led by a certified, working artist</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M4 12.500l5 5L20 6.500"/></svg><span>Lash, nails, PMU and makeup</span></li>
+      </ul>
+      <a class="btn btn-primary" href="https://wa.me/923147801112?text=Assalam%20o%20Alaikum%2C%20please%20share%20details%20about%20the%20Blush%20Academy%20courses." target="_blank" rel="noopener">Ask about courses</a>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2 style="margin-top:16px">Trusted by <em>hundreds</em> of clients</h2>
+    <div class="score"><b>4.9</b><div><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><div style="font-size:14.5px;color:#cdb6b0;margin-top:6px">292 reviews on Google</div></div></div>
+    <div class="quotes">
+      <figure class="quote"><p>&ldquo;First time I visit Blush Salon. I feel comfortable and beautiful setup.&rdquo;</p><cite>Google review</cite></figure>
+      <figure class="quote"><p>&ldquo;I honestly couldn&rsquo;t have chosen a better place to start. From the moment I walked in, the vibe was warm, welcoming and so relaxing.&rdquo;</p><cite>Misbah W. &middot; Google review</cite></figure>
+      <figure class="quote"><p>&ldquo;The services here are worth it. The staff is very co-operative.&rdquo;</p><cite>Noureen S. &middot; Google review</cite></figure>
+    </div>
+    <div class="tags"><span>Lash extensions</span><span>Nanoplastia</span><span>Hydra facial</span><span>Cooperative staff</span><span>Manicure &amp; pedicure</span></div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <span class="eyebrow">Visit us</span>
+      <h2 style="margin-top:16px">Find us in <em>Satellite Town</em></h2>
+      <dl class="info">
+        <div><dt>Address</dt><dd>D-436, Ground Floor, D Block,<br>Satellite Town Commercial Market,<br>Rawalpindi</dd></div>
+        <div><dt>Call or WhatsApp</dt><dd>0314 7801112<br><small>Landline: (051) 6132251</small></dd></div>
+        <div><dt>Hours</dt><dd>Open until 9 PM</dd></div>
+      </dl>
+      <div class="cta" style="margin-top:0">
+        <a class="btn btn-primary" href="https://wa.me/923147801112?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Blush%20Salon." target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=33.64034,73.0708397" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+    <div class="map"><a class="fallback" href="https://www.google.com/maps/search/?api=1&query=33.64034,73.0708397" target="_blank" rel="noopener">Open Blush Salon in Google Maps</a><iframe title="Blush Salon on Google Maps" src="https://maps.google.com/maps?q=33.64034,73.0708397&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <h2>Ready for your <em style="color:#f1c9d4">blush</em> moment?</h2>
+    <p>Message us to book your bridal trial, party look or a day of pampering.</p>
+    <a class="btn btn-light" href="https://wa.me/923147801112?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Blush%20Salon." target="_blank" rel="noopener">Book your appointment</a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top"><img src="img/logo.jpg" alt="Blush Salon logo" width="44" height="44"><span>&copy; Blush Salon, Satellite Town</span></a>
+    <span>Website concept by <a href="https://aalisoft.com" target="_blank" rel="noopener">aaliSoft</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
