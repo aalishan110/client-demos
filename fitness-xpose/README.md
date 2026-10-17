@@ -21,3 +21,7 @@ Public original photos were downloaded with browser pageAssets from the exact of
 Women’s sessions, bootcamp and trainer recruitment appear in the gym’s public photo gallery. Exact current programs, fees and timetable remain unverified and are presented as questions for the team. Archived seasonal offers are not displayed as current. Hours conflict across directories; no opening hours claimed. No invented staff names, ratings, testimonials, prices or guarantees. Strength/weights and cardio are visible in facility imagery and corroborated by https://pk.worldorgs.com/catalog/islamabad/gym/fitness-xpose .
 
 Real call, email, Facebook and map-search links. No forms, analytics, backend or automatic messaging. Google Fonts loaded remotely with system fallbacks. Brand and photo rights remain with their owners; concept does not imply endorsement.
+
+## Design revision
+
+Use plain links and buttons without arrow decorations. Keep hero typography in one solid color. Removed oversized slogans, outline type and decorative ticker; revised to a quieter photo-led layout with direct business copy.
