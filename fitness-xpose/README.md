@@ -25,3 +25,7 @@ Real call, email, Facebook and map-search links. No forms, analytics, backend or
 ## Design revision
 
 Use plain links and buttons without arrow decorations. Keep hero typography in one solid color. Removed oversized slogans, outline type and decorative ticker; revised to a quieter photo-led layout with direct business copy.
+
+## Reference-led redesign
+
+Reference inspected visually: https://www.thirdspace.london/ . Adapted photographic immersion, restrained serif typography, dark surfaces, generous spacing and alternating editorial sections. No reference assets, claims, facilities or copy reused. All Fitness Xpose photos and logo retained. No arrows in controls or links; all headings use one solid text color.
