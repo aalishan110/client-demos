@@ -36,10 +36,6 @@ function selectBranch(key) {
   document.querySelector('#branch-kind').textContent = branch.kind;
   const title = document.querySelector('#branch-name');
   title.replaceChildren(document.createTextNode(branch.title));
-  const arrow = document.createElement('span');
-  arrow.textContent = '↗';
-  arrow.setAttribute('aria-hidden', 'true');
-  title.append(arrow);
   document.querySelector('#branch-address').textContent = branch.address;
   document.querySelector('#branch-address').style.whiteSpace = 'pre-line';
   document.querySelector('#branch-index').textContent = branch.index;
