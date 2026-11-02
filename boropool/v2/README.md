@@ -16,3 +16,9 @@ Country-specific reference points, checked 2 November 2026:
 
 ## Verification
 JavaScript syntax and local links checked. Profession/destination finder, Bengali filter, Japan destination tab and a full guide navigation tested. Assessment preview completed end to end. Desktop and 390px mobile layout visually inspected. Mobile menu tested.
+
+## Interactive sample admin
+
+Open admin.html from the sample strip. It includes an overview, guide editor with previews and sample draft/publish actions, homepage content editing, fictional enquiries with status and internal notes, nine language options and RTL preview. Changes are kept in sessionStorage for the browser session only. They do not update the public website or send messages. Reset sample data restores the original demonstration records. No authentication or production admin service is represented as implemented.
+
+Admin workflows tested: create, preview and publish guide; search; homepage live preview and save; enquiry status and notes; RTL language preview and toggle; session persistence and reset; mobile menu at 390px width.
