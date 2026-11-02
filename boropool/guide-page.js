@@ -1,0 +1,1 @@
+const menu=document.querySelector('.menu-toggle');const nav=document.querySelector('#navlinks');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open);menu.textContent=open?'Close':'Menu'});document.querySelector('#region').addEventListener('change',e=>{e.target.value='Bangladesh'});
