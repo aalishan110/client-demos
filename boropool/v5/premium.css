@@ -1,0 +1,218 @@
+/* v5: a classic editorial presentation with quiet, practical depth. */
+:root{--ink:#172c42;--navy:#142f49;--body:#5b6872;--paper:#f6f4ef;--brass:#9c8050;--shadow:0 2px 5px #132f4b04,0 10px 25px #132f4b08}
+body{font-size:15px;line-height:1.8}
+.container{max-width:1240px}
+.sample{font-size:11px;padding:8px 16px}
+.sample .admin-demo-link{font-size:10px}
+.utility>.container{font-size:11px;min-height:34px}
+.country-label select{font-size:12px;width:155px}
+.navigation{height:88px}
+.navigation nav{font-size:13px;gap:29px}
+.brand img{width:110px;height:77px}
+.nav-button{font-size:12px;padding:11px 18px;min-height:42px}
+.overline{font-size:10px;letter-spacing:1.6px}
+h2{font-size:43px;font-weight:550;letter-spacing:-1.5px}
+.button{font-size:13px;min-height:48px;padding:13px 22px;border-radius:7px}
+.text-link{font-size:13px}
+.premium-hero{background:var(--paper);padding:56px 0 0;position:relative;overflow:visible;border-bottom:1px solid #dfded7}
+.premium-hero .hero-layout{grid-template-columns:1.08fr 1fr;gap:90px;align-items:center}
+.premium-hero .hero-copy{padding:10px 0 25px}
+.premium-hero .hero-copy .overline{font-size:9px;letter-spacing:1.5px;color:#7f704e}
+.premium-hero .hero-copy h1{font-family:'Libre Caslon Display',Georgia,serif;font-style:normal;font-weight:400;font-size:clamp(52px,5.1vw,64px);line-height:1.04;letter-spacing:-1.65px;margin:25px 0 27px;max-width:580px;color:var(--ink)}
+.premium-hero .hero-intro{font-size:16px;line-height:1.9;max-width:440px}
+.premium-hero .hero-actions{margin-top:31px;gap:24px;align-items:center}
+.premium-hero .hero-actions .text-link{font-size:12px;border-color:#a1a9a7}
+.hero-footnote{display:flex;gap:16px;align-items:center;margin-top:35px}
+.hero-rule{height:40px;width:2px;background:#b39b70;flex:none}
+.hero-footnote p{font-size:11px;line-height:1.85;color:#6c777d}
+.hero-portrait{margin:0;border:1px solid #e6e2d8;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 3px 7px #142f4906,0 20px 45px #142f4910}
+.hero-portrait>img{width:100%;height:346px;object-fit:cover;object-position:center 49%}
+.hero-portrait figcaption{padding:23px 27px;display:flex;justify-content:space-between;gap:24px;align-items:center;background:#fff}
+.hero-portrait figcaption>span{font-size:8px;letter-spacing:1.6px;color:#8c795a;max-width:110px;line-height:1.9}
+.hero-portrait figcaption p{font-size:16px;color:var(--ink);line-height:1.55;font-weight:500;border-left:1px solid #e6e4dd;padding-left:27px}
+.hero-finder{position:relative;z-index:2}
+.premium-hero .finder{margin:45px 0 -40px;padding:25px 28px;box-shadow:0 3px 6px #142f4904,0 14px 30px #142f490a}
+.finder-title strong{font-size:15px}
+.finder-title span,.finder>label{font-size:11px}
+.finder select{font-size:13px;margin-top:5px}
+.finder .button{font-size:12px}
+.intro-strip{padding-top:83px;padding-bottom:31px}
+.intro-strip p{font-size:12px}
+.intro-strip>.container>div{font-size:11px;gap:9px 25px}
+.section{padding-top:88px;padding-bottom:88px}
+.section-heading>p{font-size:14px;max-width:410px;line-height:1.85}
+.section-heading{gap:55px;margin-bottom:35px}
+.language-collection{padding:22px 25px;background:var(--paper);border:1px solid #e8e4db;border-radius:9px;margin:0 0 29px;display:flex;align-items:center;gap:28px;box-shadow:0 2px 5px #142f4903}
+.language-collection>span{font-size:8px;letter-spacing:1.2px;max-width:85px;line-height:1.8;flex:none;color:#7c715d}
+.language-collection>div{display:flex;flex-wrap:wrap;gap:11px 23px;align-items:center}
+.language-collection a{font-size:14px;color:#2c4256;line-height:1.8;border-bottom:1px solid transparent}
+.language-collection a:hover{border-color:#9c8050}
+.profession-tabs button{font-size:12px;padding:9px 16px}
+.secondary-filters input,.secondary-filters select{font-size:12px;min-height:44px}
+.results,.results button{font-size:11px}
+.guide-grid{gap:25px}
+.guide-photo img{height:175px}
+.guide-photo>span{font-size:9px}
+.guide-card-content{padding:25px}
+.guide-card-content .overline{font-size:8px}
+.guide-card h3{font-size:21px;line-height:1.45;font-weight:600;letter-spacing:-.4px}
+.guide-card-content>p{font-size:12px;line-height:1.9}
+.guide-card-base{align-items:flex-start}
+.guide-card-base>span{font-size:9px;white-space:nowrap}
+.guide-card-base .text-link{font-size:11px}
+.destination-tabs small{font-size:11px}
+.destination-copy{padding:34px}
+.destination-copy p{font-size:13px}
+.destination-copy dl{font-size:12px}
+.destination-copy .text-link{font-size:12px}
+.comparison-note{font-size:11px;gap:25px}
+.comparison-note strong{font-size:12px}
+.service-card{padding:33px;background:linear-gradient(#fff,#fdfdfb);box-shadow:var(--shadow)}
+.service-card h3{font-size:23px;line-height:1.4}
+.service-card p{font-size:14px;line-height:1.8}
+.service-card ul{font-size:12px;line-height:1.7}
+.service-card .text-link{font-size:12px}
+.assessment-section{background:#162e46;padding:78px 0;box-shadow:inset 0 1px #ffffff1a}
+.assessment-summary>div>p{font-size:14px}
+.assessment-steps h3{font-size:18px}
+.assessment-steps p{font-size:13px}
+.about-content>p{font-size:14px}
+.about-content>.large-copy{font-size:25px}
+.about-address{font-size:12px}
+.about-principles h3{font-size:14px}
+.about-principles p{font-size:12px}
+.faq-layout>div>.muted{font-size:14px}
+.faqs summary{font-size:14px}
+.faqs details p{font-size:13px}
+.footer-main h3{font-size:12px}
+.footer-main a,.footer-main p{font-size:12px}
+.footer-base{font-size:10px}
+.breadcrumb{font-size:11px}
+.article-heading h1{max-width:1000px}
+.article-intro{line-height:1.8}
+.sticky-toc nav>a{font-size:12px}
+.article-context{font-size:11px}
+.article-section p{font-size:16px;line-height:2}
+.article-meta{font-size:10px}
+.document-list li{font-size:14px}
+.assessment-intro>p:not(.large-copy){font-size:14px}
+.form-intro{font-size:13px}
+fieldset label{font-size:12px}
+fieldset input,fieldset select,fieldset textarea{font-size:14px}
+[lang=hi],[lang=ne]{font-family:'Noto Sans Devanagari',sans-serif!important;letter-spacing:normal!important}
+[lang=bn]{font-family:'Noto Sans Bengali',sans-serif!important;letter-spacing:normal!important}
+[lang=ta]{font-family:'Noto Sans Tamil',sans-serif!important;letter-spacing:normal!important}
+[lang=si]{font-family:'Noto Sans Sinhala',sans-serif!important;letter-spacing:normal!important}
+[lang=ur],[lang=ps]{font-family:'Noto Naskh Arabic',serif!important;letter-spacing:normal!important}
+[lang=dv]{font-family:'Noto Sans Thaana',sans-serif!important;letter-spacing:normal!important}
+.guide-card h3:not([lang=en]){font-size:21px;line-height:1.75;font-weight:500}
+.guide-card h3[lang=ur],.guide-card h3[lang=ps]{font-size:26px;line-height:1.65}
+.guide-card-content>p:not([lang=en]){font-size:13px;line-height:2}
+.guide-card-content>p[lang=ur],.guide-card-content>p[lang=ps]{font-size:18px;line-height:1.9}
+.article-heading h1:not([lang=en]){font-size:43px;line-height:1.65;letter-spacing:0}
+.article-body:not([lang=en]) .article-intro{font-size:23px;line-height:2}
+.article-body:not([lang=en]) .article-section h2{font:500 29px/1.8 inherit;letter-spacing:normal}
+.article-body:not([lang=en]) .article-section p{line-height:2.2;font-size:17px}
+.article-body[lang=ur] .article-section p,.article-body[lang=ps] .article-section p{font-size:23px;line-height:2}
+.article-body[lang=dv] .article-section p{font-size:19px}
+.article-body[dir=rtl] .document-list ul{padding-inline-start:24px}
+.related-grid h3:not([lang=en]){font-size:19px;line-height:1.8}
+@media(max-width:1100px){
+ .premium-hero .hero-layout{gap:45px}
+ .premium-hero .hero-copy h1{font-size:58px}
+ .premium-hero .hero-actions{gap:17px}
+ .hero-portrait>img{height:355px}
+ .hero-portrait figcaption{padding:19px}
+ .hero-portrait figcaption p{font-size:14px;padding-left:18px}
+ .hero-portrait figcaption>span{font-size:7px}
+ .guide-card-base{display:block}
+ .guide-card-base>span{display:block;margin-top:10px}
+}
+@media(max-width:760px){
+ .container{width:calc(100% - 40px)}
+ .sample{font-size:9px;line-height:1.9;padding:7px 14px}
+ .sample span{margin:0 3px}
+ .sample .admin-demo-link{font-size:9px}
+ .utility>.container{font-size:9px;min-height:33px}
+ .country-label select{font-size:10px;width:130px}
+ .navigation{height:75px;gap:15px}
+ .brand img{height:65px;width:94px}
+ .navigation nav{font-size:14px}
+ .navigation .menu{font-size:12px;min-height:40px;padding:8px 14px}
+ .premium-hero{padding-top:31px}
+ .premium-hero .hero-layout{grid-template-columns:1fr;gap:28px}
+ .premium-hero .hero-copy{padding:0}
+ .premium-hero .hero-copy .overline{font-size:8px;letter-spacing:1px}
+ .premium-hero .hero-copy h1{font-size:49px;letter-spacing:-1px;line-height:1.07;margin:19px 0 22px}
+ .premium-hero .hero-intro{font-size:14px;line-height:1.85;max-width:none}
+ .premium-hero .hero-actions{gap:17px;align-items:flex-start;flex-direction:column;margin-top:25px}
+ .button{font-size:12px;min-height:45px;padding:12px 18px}
+ .hero-footnote{margin-top:25px}
+ .hero-footnote p{font-size:10px}
+ .hero-portrait>img{height:235px;object-position:center 65%}
+ .hero-portrait figcaption{padding:19px 21px;gap:20px}
+ .hero-portrait figcaption p{font-size:14px}
+ .hero-portrait figcaption>span{font-size:7px;max-width:90px}
+ .premium-hero .finder{margin:25px 0 -35px;padding:22px;gap:17px;grid-template-columns:1fr}
+ .finder-title strong{font-size:14px}
+ .finder-title span{font-size:10px}
+ .finder>label{border-left:0;padding-left:0;font-size:10px}
+ .finder select{font-size:12px;margin-top:5px;padding:6px 0}
+ .finder .button{width:100%;font-size:12px}
+ .intro-strip{padding-top:65px;padding-bottom:29px}
+ .intro-strip>.container{gap:20px;display:block}
+ .intro-strip p{font-size:12px}
+ .intro-strip>.container>div{font-size:10px;margin-top:20px;gap:10px 15px}
+ .section{padding-top:58px;padding-bottom:58px}
+ h2{font-size:32px;line-height:1.25;letter-spacing:-1px}
+ .section-heading>p{font-size:13px;line-height:1.85;margin-top:20px}
+ .language-collection{display:block;padding:19px;margin-bottom:23px}
+ .language-collection>span{font-size:8px;max-width:none}
+ .language-collection>div{margin-top:15px;gap:10px 20px}
+ .language-collection a{font-size:14px}
+ .profession-tabs{gap:5px}
+ .profession-tabs button{font-size:11px;padding:8px 10px}
+ .secondary-filters input,.secondary-filters select{font-size:12px;min-height:43px}
+ .guide-grid{gap:24px}
+ .guide-photo img{height:195px}
+ .guide-card-content{padding:23px}
+ .guide-card-content .overline{font-size:8px}
+ .guide-card h3{font-size:22px}
+ .guide-card-content>p{font-size:13px}
+ .guide-card-base{display:flex}
+ .guide-card-base>span{font-size:9px;margin:0}
+ .guide-card-base .text-link{font-size:12px}
+ .destination-tabs small{font-size:9px}
+ .destination-copy{padding:26px}
+ .destination-copy h3{font-size:27px}
+ .destination-copy p{font-size:13px}
+ .destination-copy dl{font-size:12px}
+ .comparison-note{font-size:11px;gap:15px}
+ .comparison-note strong{font-size:12px}
+ .service-card{padding:27px}
+ .service-card h3{font-size:24px}
+ .service-card p{font-size:14px}
+ .service-card ul{font-size:12px}
+ .assessment-summary>div>p{font-size:14px}
+ .assessment-steps p{font-size:13px}
+ .about-content>.large-copy{font-size:23px}
+ .about-principles h3{font-size:14px}
+ .about-principles p{font-size:12px}
+ .faqs summary{font-size:13px}
+ .faqs details p{font-size:13px}
+ .footer-main a,.footer-main p{font-size:11px}
+ .footer-base{font-size:9px}
+ .breadcrumb{font-size:10px}
+ .article-heading h1:not([lang=en]){font-size:30px;line-height:1.7}
+ .article-body:not([lang=en]) .article-intro{font-size:20px}
+ .article-body:not([lang=en]) .article-section h2{font-size:24px;line-height:1.8}
+ .article-body:not([lang=en]) .article-section p{font-size:15px;line-height:2.2}
+ .article-body[lang=ur] .article-section p,.article-body[lang=ps] .article-section p{font-size:21px}
+ .article-body[lang=dv] .article-section p{font-size:18px}
+ .article-meta{font-size:9px}
+ .sticky-toc nav>a{font-size:12px}
+ .document-list li{font-size:13px}
+ .assessment-intro>p:not(.large-copy){font-size:13px}
+}
+.article-body:not([lang=en]) .article-section h2,.article-body:not([lang=en]) .document-list h2{font-family:inherit;font-weight:500;line-height:1.8;letter-spacing:normal}
+@media(max-width:760px){.navigation>.nav-button{display:none}.navigation nav{font-size:14px}.navigation nav.open{box-shadow:0 10px 20px #142f4910}}

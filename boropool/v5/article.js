@@ -1,0 +1,1 @@
+const menu=document.querySelector('#menu');menu.addEventListener('click',()=>{const open=document.querySelector('#navigation').classList.toggle('open');menu.setAttribute('aria-expanded',open);menu.textContent=open?'Close':'Menu'});document.querySelector('#print-guide').addEventListener('click',()=>window.print());
