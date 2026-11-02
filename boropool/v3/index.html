@@ -3,924 +3,183 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BOROPOOL — Global Career Mobility Advisory</title>
-<meta name="description" content="Country-by-country career guides for skilled professionals from Bangladesh. Salaries, recognition, exams, language tests and the real cost — in plain language.">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#0c1f3d">
+<title>BOROPOOL — Global Career Mobility Advisory</title>
+<meta name="description" content="Step-by-step career guides for skilled professionals from Bangladesh: recognition, language tests, registration, visa and the real cost, in the right order.">
+<meta name="theme-color" content="#0b2147">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Hanken+Grotesk:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600&family=Hind+Siliguri:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500&family=Noto+Sans+Tamil:wght@400;500&family=Noto+Sans+Sinhala:wght@400;500&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --ink:#0c1f3d;
-  --navy:#12305f;
-  --navy-deep:#091a33;
-  --brass:#b0832f;
-  --brass-soft:#d9b66f;
-  --paper:#f6f2e9;
-  --paper-2:#ede7d8;
-  --white:#fffdf8;
-  --muted:#56637a;
-  --line:rgba(12,31,61,.15);
-  --line-strong:rgba(12,31,61,.32);
-  --serif:'Newsreader','Iowan Old Style','Palatino Linotype',Georgia,serif;
-  --sans:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;
-  --bn:'Hind Siliguri','Noto Sans Bengali','Kohinoor Bangla',sans-serif;
-  --bn-serif:'Noto Serif Bengali','Hind Siliguri','Kohinoor Bangla',serif;
-  --wrap:1240px;
-  --gut:clamp(20px,4vw,48px);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:110px}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-img,svg{display:block;max-width:100%}
-a{color:inherit}
-button{font:inherit;color:inherit;cursor:pointer}
-:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
-.bn{font-family:var(--bn)}
-.skip{position:absolute;left:-9999px}
-.skip:focus{left:16px;top:12px;background:var(--ink);color:#fff;padding:10px 14px;z-index:99}
-
-/* ---------- top bar ---------- */
-.topbar{background:var(--navy-deep);color:#cdd6e6;font-size:13px;letter-spacing:.01em}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:40px}
-.topbar .where{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.flag{width:22px;height:14px;border-radius:2px;flex:none;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
-.topbar strong{color:#fff;font-weight:600}
-.topbar .soon{color:#8fa0bd}
-.topbar .soon b{font-weight:500;color:#b9c6dd}
-.topbar .contact{display:flex;gap:22px;align-items:center}
-.topbar a{text-decoration:none;color:#e5ebf6}
-.topbar a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
-@media (max-width:860px){.topbar .soon,.topbar .contact .mail{display:none}}
-@media (max-width:520px){.topbar .contact{display:none}}
-
-/* ---------- header ---------- */
-header.site{position:sticky;top:0;z-index:40;background:rgba(246,242,233,.92);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
-header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
-.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
-.brand svg{width:44px;height:44px}
-.brand .name{display:flex;flex-direction:column;line-height:1}
-.brand .name b{font-family:var(--sans);font-weight:700;letter-spacing:.2em;font-size:17px;color:var(--navy)}
-.brand .name span{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:6px;font-weight:500}
-nav.primary{display:flex;gap:34px;align-items:center}
-nav.primary a{white-space:nowrap;text-decoration:none;font-size:15px;font-weight:500;color:var(--ink);position:relative;padding:6px 0}
-nav.primary a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
-nav.primary a:hover::after{transform:scaleX(1)}
-.head-actions{display:flex;align-items:center;gap:14px}
-.lang{display:flex;align-items:center;border:1px solid var(--line-strong);border-radius:2px;font-size:13px;font-weight:600}
-.lang button{background:none;border:0;padding:7px 11px;letter-spacing:.04em}
-.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
-.lang button.bn{font-weight:500;font-size:14px}
-@media (max-width:1240px){nav.primary{gap:24px}.head-actions .btn{display:none}}
-.btn{white-space:nowrap;display:inline-flex;align-items:center;gap:12px;background:var(--navy);color:#fff;text-decoration:none;border:0;padding:14px 22px;font-weight:600;font-size:15px;border-radius:2px;transition:background .25s ease, transform .25s ease;letter-spacing:.005em}
-.btn:hover{background:var(--ink)}
-.btn .arr{display:inline-block;transition:transform .25s ease;color:var(--brass-soft)}
-.btn:hover .arr{transform:translateX(4px)}
-.btn.sm{padding:10px 16px;font-size:14px}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line-strong)}
-.btn.ghost:hover{background:var(--ink);color:#fff}
-.link{display:inline-flex;gap:10px;align-items:center;font-weight:600;text-decoration:none;border-bottom:1px solid var(--line-strong);padding-bottom:3px}
-.link:hover{border-color:var(--brass)}
-.menu-btn{display:none;background:none;border:1px solid var(--line-strong);width:44px;height:44px;border-radius:2px;position:relative}
-.menu-btn i{position:absolute;left:12px;right:12px;height:1.5px;background:var(--ink);transition:.25s}
-.menu-btn i:nth-child(1){top:16px}.menu-btn i:nth-child(2){top:22px}.menu-btn i:nth-child(3){top:28px}
-.menu-btn[aria-expanded="true"] i:nth-child(1){top:22px;transform:rotate(45deg)}
-.menu-btn[aria-expanded="true"] i:nth-child(2){opacity:0}
-.menu-btn[aria-expanded="true"] i:nth-child(3){top:22px;transform:rotate(-45deg)}
-@media (max-width:980px){
-  nav.primary{position:absolute;left:0;right:0;top:100%;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:8px var(--gut) 24px;display:none}
-  nav.primary.open{display:flex}
-  nav.primary a{padding:16px 0;width:100%;border-bottom:1px solid var(--line);font-size:18px}
-  nav.primary a::after{display:none}
-  .menu-btn{display:block}
-  .head-actions .btn{display:none}
-}
-@media (max-width:420px){.brand .name span{display:none}.lang button{padding:7px 9px}}
-
-/* ---------- hero ---------- */
-.hero{position:relative;padding:clamp(48px,7vw,96px) 0 clamp(56px,7vw,96px);overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:
-  linear-gradient(var(--line) 1px,transparent 1px) 0 0/100% 120px;opacity:.35;pointer-events:none;-webkit-mask-image:linear-gradient(#000,transparent 85%);mask-image:linear-gradient(#000,transparent 85%)}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(32px,5vw,80px);align-items:center;position:relative}
-.eyebrow{display:flex;align-items:center;gap:14px;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--brass)}
-.eyebrow::before{content:"";width:34px;height:1px;background:var(--brass)}
-h1{text-wrap:balance;font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,5.2vw,4.7rem);line-height:1.01;letter-spacing:-.022em;margin:22px 0 26px;color:var(--ink);font-variation-settings:"opsz" 72}
-h1 em{font-style:italic;color:var(--navy);font-weight:400}
-h1 .u{background:linear-gradient(var(--brass-soft),var(--brass-soft)) 0 92%/100% 3px no-repeat;padding-bottom:2px}
-.hero p.lede{font-size:clamp(1.05rem,1.5vw,1.22rem);color:#2b3b57;max-width:35em;margin:0 0 34px}
-.hero .cta{display:flex;flex-wrap:wrap;gap:16px 26px;align-items:center}
-.hero-facts{display:grid;grid-template-columns:repeat(3,auto);gap:0 40px;margin-top:52px;padding-top:26px;border-top:1px solid var(--line);justify-content:start}
-.hero-facts div{font-size:13px;color:var(--muted);line-height:1.35}
-.hero-facts b{display:block;font-family:var(--serif);font-weight:400;font-size:1.65rem;color:var(--ink);letter-spacing:-.01em;margin-bottom:4px}
-
-/* map panel */
-.route{position:relative;background:var(--navy-deep);color:#fff;border-radius:3px;aspect-ratio:600/560;min-height:420px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(9,26,51,.6)}
-.route svg.map{position:absolute;inset:0;width:100%;height:100%}
-.route .cap{position:absolute;top:20px;left:22px;right:22px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8fa6cc}
-.route .glass{position:absolute;left:20px;bottom:20px;right:20px;background:var(--white);color:var(--ink);padding:18px 20px;border-radius:2px;display:grid;grid-template-columns:1fr auto;gap:4px 18px;align-items:center;box-shadow:0 18px 40px -18px rgba(0,0,0,.55)}
-.route .glass small{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);font-weight:700}
-.route .glass strong{font-family:var(--serif);font-weight:500;font-size:1.28rem;letter-spacing:-.01em;grid-column:1}
-.route .glass .tags{display:flex;gap:6px;align-items:center;grid-row:1/3;grid-column:2}
-.tag{font-size:11.5px;font-weight:600;border:1px solid var(--line-strong);padding:3px 8px;border-radius:2px;letter-spacing:.04em;color:var(--ink);background:transparent;white-space:nowrap}
-.tag.bn{font-family:var(--bn);font-size:13px;letter-spacing:0;background:rgba(176,131,47,.14);border-color:rgba(176,131,47,.5);color:#6d4d12;font-weight:500}
-.arc{fill:none;stroke:var(--brass-soft);stroke-width:1.4;stroke-dasharray:3 5;opacity:.9}
-.arc.draw{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw 2.4s .5s cubic-bezier(.5,.1,.2,1) forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-.pulse{transform-origin:center;transform-box:fill-box;animation:pulse 2.6s ease-out infinite}
-@keyframes pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(3.2);opacity:0}}
-@media (max-width:980px){.hero .wrap{grid-template-columns:1fr}.route{aspect-ratio:auto;height:480px}}
-@media (max-width:560px){.hero-facts{grid-template-columns:1fr 1fr;gap:20px}.hero-facts div:last-child{grid-column:1/-1}.route{height:440px}.route .glass{grid-template-columns:1fr}.route .glass .tags{grid-row:auto;grid-column:1;margin-top:8px}}
-
-/* ---------- sections ---------- */
-section{position:relative}
-.sec{padding:clamp(72px,9vw,128px) 0}
-.sec-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px clamp(32px,6vw,96px);align-items:end;margin-bottom:clamp(36px,5vw,64px)}
-.label{display:flex;gap:14px;align-items:center;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--brass);margin-bottom:18px}
-.label i{font-style:normal;font-family:var(--serif);letter-spacing:0;font-size:15px;color:var(--ink);opacity:.5}
-h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4vw,3.4rem);line-height:1.06;letter-spacing:-.018em;margin:0;font-variation-settings:"opsz" 60}
-h2 em{font-style:italic;color:var(--navy)}
-.sec-head p{margin:0;color:#34435f;font-size:1.06rem;max-width:34em}
-@media (max-width:860px){.sec-head{grid-template-columns:1fr}}
-
-/* guides */
-.filters{display:grid;gap:14px;padding:22px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
-.filter-row{display:flex;flex-wrap:wrap;gap:8px 8px;align-items:center}
-.filter-row .k{width:104px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.chip{background:transparent;border:1px solid var(--line-strong);padding:7px 15px;font-size:14.5px;border-radius:100px;font-weight:500;transition:.2s}
-.chip:hover{border-color:var(--ink)}
-.chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
-@media (max-width:640px){.filter-row .k{width:100%}}
-.count{display:flex;justify-content:space-between;font-size:13.5px;color:var(--muted);padding:16px 0 6px}
-ol.guides{list-style:none;margin:0;padding:0}
-.guide{border-bottom:1px solid var(--line)}
-.guide button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:56px minmax(0,1.5fr) 150px 170px 70px;gap:20px;align-items:center;padding:26px 0;cursor:pointer;position:relative;transition:padding .35s ease, background .35s ease}
-.guide button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
-.guide button::before{content:"";position:absolute;inset:0 calc(var(--gut)*-1);background:var(--paper-2);opacity:0;transition:opacity .3s ease;z-index:-1}
-.guide button:hover{padding-left:14px}
-.guide button:hover::before{opacity:1}
-.guide .num{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--brass)}
-.guide h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,2.3vw,1.95rem);letter-spacing:-.012em;line-height:1.15;margin:0 0 6px}
-.guide .sum{font-size:15px;color:#41506b;max-width:40em;line-height:1.5}
-.guide .meta{font-size:14px;line-height:1.4}
-.guide .meta b{display:block;font-weight:600}
-.guide .meta span{color:var(--muted)}
-.guide .langs{display:flex;gap:6px;flex-wrap:wrap}
-.guide .go{justify-self:end;width:46px;height:46px;border:1px solid var(--line-strong);border-radius:50%;display:grid;place-items:center;transition:.3s}
-.guide button:hover .go{background:var(--ink);border-color:var(--ink);color:#fff;transform:rotate(-45deg)}
-.guide.hide{display:none}
-.empty{padding:48px 0;color:var(--muted);display:none}
-@media (max-width:900px){
-  .guide button{grid-template-columns:40px 1fr 46px;gap:8px 14px;padding:22px 0}
-  .guide .meta,.guide .langs{grid-column:2}
-  .guide .go{grid-row:1;grid-column:3}
-  .guide button:hover{padding-left:0}
-}
-
-/* anatomy */
-.dark{background:var(--navy-deep);color:#e8edf6}
-.dark .label{color:var(--brass-soft)}
-.dark .label i{color:#fff}
-.dark h2 em{color:var(--brass-soft)}
-.dark .sec-head p{color:#aebcd6}
-.anat{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,96px)}
-.anat .left{position:sticky;top:120px;align-self:start}
-.anat .left p{color:#aebcd6;max-width:30em;margin:22px 0 32px}
-.ledger{list-style:none;margin:0;padding:0;counter-reset:l;border-top:1px solid rgba(255,255,255,.3)}
-.ledger li{display:grid;grid-template-columns:64px 1fr;gap:6px 14px;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.14)}
-.ledger li::before{counter-increment:l;content:"0" counter(l);font-family:var(--serif);font-style:italic;color:var(--brass-soft);font-size:1.4rem;grid-row:1/3}
-.ledger h4{margin:0;font-family:var(--serif);font-weight:400;font-size:1.5rem;letter-spacing:-.01em;color:#fff}
-.ledger p{margin:0;color:#9fb0cc;font-size:15.5px;max-width:34em}
-.btn.on-dark{background:var(--brass);color:#1a1204}
-.btn.on-dark:hover{background:var(--brass-soft)}
-.btn.on-dark .arr{color:#1a1204}
-@media (max-width:900px){.anat{grid-template-columns:1fr}.anat .left{position:static}}
-
-/* services */
-.svc{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
-.svc article{padding:30px 28px 36px 0;border-right:1px solid var(--line);margin-right:28px;display:flex;flex-direction:column;gap:14px}
-.svc article:last-child{border-right:0;margin-right:0}
-.svc .n{font-family:var(--serif);font-style:italic;color:var(--brass);font-size:1.15rem}
-.svc h3{font-family:var(--serif);font-weight:400;font-size:1.7rem;line-height:1.1;margin:0;letter-spacing:-.012em}
-.svc p{margin:0;color:#41506b;font-size:15.5px}
-.svc ul{list-style:none;padding:0;margin:auto 0 0;display:flex;gap:6px;flex-wrap:wrap}
-.svc li{font-size:12.5px;font-weight:600;letter-spacing:.03em;border:1px solid var(--line-strong);padding:4px 10px;border-radius:100px}
-@media (max-width:1020px){.svc{grid-template-columns:1fr 1fr}.svc article{padding:28px 0;margin:0;border-right:0;border-bottom:1px solid var(--line)}.svc article:nth-child(odd){padding-right:28px}}
-@media (max-width:620px){.svc{grid-template-columns:1fr}.svc article:nth-child(odd){padding-right:0}}
-
-/* assessment */
-.assess{background:var(--paper-2)}
-.assess .grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:start}
-.assess .copy p{color:#34435f;margin:22px 0 0;max-width:30em}
-.assess ul.points{list-style:none;padding:0;margin:34px 0 0;display:grid;gap:0;border-top:1px solid var(--line-strong)}
-.assess .points li{display:grid;grid-template-columns:34px 1fr;padding:16px 0;border-bottom:1px solid var(--line);font-size:15.5px}
-.assess .points svg{width:20px;height:20px;color:var(--brass);margin-top:3px}
-form.card{background:var(--white);border:1px solid var(--line-strong);border-radius:3px;padding:clamp(22px,3vw,40px);box-shadow:0 30px 60px -40px rgba(12,31,61,.5)}
-.steps{display:flex;gap:6px;margin-bottom:28px}
-.steps i{flex:1;height:3px;background:var(--line);position:relative;overflow:hidden}
-.steps i::after{content:"";position:absolute;inset:0;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .5s ease}
-.steps i.on::after{transform:scaleX(1)}
-.fld{display:grid;gap:8px;margin-bottom:22px}
-.fld>label,.fld>.l{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted)}
-select,input[type=text],input[type=tel]{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line-strong);border-radius:2px;padding:13px 14px;width:100%;appearance:none;-webkit-appearance:none}
-select{background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 20px) 55%,calc(100% - 14px) 55%;background-size:6px 6px;background-repeat:no-repeat;padding-right:38px}
-select:focus,input:focus{outline:2px solid var(--brass);outline-offset:1px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.pills{display:flex;flex-wrap:wrap;gap:8px}
-.pill{border:1px solid var(--line-strong);background:var(--paper);padding:9px 14px;font-size:14.5px;border-radius:2px;font-weight:500;transition:.2s}
-.pill:hover{border-color:var(--ink)}
-.pill[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
-.pill.bn{font-family:var(--bn)}
-.slotgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.slot{padding:12px 6px;text-align:center;line-height:1.25;font-size:13.5px}
-.slot b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;font-weight:600}
-.slot[disabled]{opacity:.35;text-decoration:line-through;cursor:not-allowed}
-.form-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:8px}
-.form-foot small{color:var(--muted);font-size:13px;max-width:22em;line-height:1.4}
-.done{display:none;text-align:left;padding:10px 0}
-.done h3{font-family:var(--serif);font-weight:400;font-size:2rem;margin:10px 0 10px;letter-spacing:-.01em}
-.done p{color:#41506b;margin:0 0 18px}
-form.sent .fields{display:none}form.sent .done{display:block}
-@media (max-width:900px){.assess .grid{grid-template-columns:1fr}}
-@media (max-width:520px){.two{grid-template-columns:1fr}.slotgrid{grid-template-columns:repeat(2,1fr)}}
-
-/* principles */
-.quote{padding:clamp(80px,10vw,150px) 0;text-align:left}
-.quote blockquote{margin:0;font-family:var(--serif);font-size:clamp(1.9rem,4.6vw,4rem);line-height:1.08;letter-spacing:-.02em;font-weight:300;max-width:18em;font-variation-settings:"opsz" 72}
-.quote blockquote em{font-style:italic;color:var(--navy);font-weight:400}
-.pr{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:clamp(40px,6vw,80px);border-top:1px solid var(--ink)}
-.pr div{padding:26px 32px 0 0}
-.pr div+div{padding-left:32px;border-left:1px solid var(--line)}
-.pr h3{font-family:var(--serif);font-weight:400;font-size:1.6rem;margin:0 0 10px;letter-spacing:-.01em}
-.pr p{margin:0;color:#41506b;font-size:15.5px;max-width:23em}
-@media (max-width:820px){.pr{grid-template-columns:1fr}.pr div,.pr div+div{padding:24px 0;border-left:0;border-bottom:1px solid var(--line)}}
-
-/* languages */
-.langs-band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white)}
-.langs-band .wrap{padding-top:clamp(48px,6vw,80px);padding-bottom:clamp(48px,6vw,80px)}
-.lgrid{display:grid;grid-template-columns:repeat(9,1fr);border:1px solid var(--line-strong);margin-top:34px}
-.lgrid div{padding:22px 12px 18px;border-right:1px solid var(--line);text-align:center;display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;min-height:112px}
-.lgrid div:last-child{border-right:0}
-.lgrid .n{font-size:1.5rem;line-height:1.3;font-family:var(--sans)}
-.lgrid small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.lgrid .live{background:var(--ink);color:#fff}
-.lgrid .live small{color:var(--brass-soft)}
-.lgrid .rtl{direction:rtl;font-family:'Noto Naskh Arabic',serif}
-.lgrid .dv{font-family:'Noto Sans Devanagari',sans-serif}
-.lgrid .ta{font-family:'Noto Sans Tamil',sans-serif}
-.lgrid .si{font-family:'Noto Sans Sinhala',sans-serif}
-.lgrid .bnn{font-family:var(--bn)}
-.lnote{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin-top:18px}
-@media (max-width:1000px){.lgrid{grid-template-columns:repeat(3,1fr)}.lgrid div{border-bottom:1px solid var(--line)}.lgrid div:nth-child(3n){border-right:0}}
-
-/* contact */
-.contact{background:var(--navy);color:#fff}
-.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,6vw,96px);padding-top:clamp(64px,8vw,110px);padding-bottom:clamp(64px,8vw,110px)}
-.contact h2{color:#fff}.contact h2 em{color:var(--brass-soft)}
-.contact .label{color:var(--brass-soft)}.contact .label i{color:#fff}
-.contact p{color:#bccae2;max-width:30em;margin:22px 0 32px}
-.contact dl{margin:0;display:grid;border-top:1px solid rgba(255,255,255,.3)}
-.contact dl div{display:grid;grid-template-columns:130px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14)}
-.contact dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#93a7c9;font-weight:600;padding-top:3px}
-.contact dd{margin:0;font-size:1.08rem}
-.contact dd a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
-.contact dd a:hover{border-color:var(--brass-soft)}
-@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}.contact dl div{grid-template-columns:1fr;gap:4px}}
-.wa{display:inline-flex;gap:12px;align-items:center;background:#1fa855;color:#fff;text-decoration:none;padding:14px 22px;border-radius:2px;font-weight:600}
-.wa:hover{background:#188a45}
-.wa svg{width:20px;height:20px}
-
-footer.site{background:var(--navy-deep);color:#8fa1c1;font-size:13.5px}
-footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:26px;padding-bottom:26px}
-footer.site a{color:#cdd8ee;text-decoration:none}
-footer.site a:hover{text-decoration:underline}
-.foot-brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;letter-spacing:.2em;font-size:13px}
-.foot-brand svg{width:28px;height:28px}
-
-/* reader drawer */
-dialog.reader{border:0;padding:0;margin:0 0 0 auto;height:100dvh;max-height:100dvh;width:min(760px,100%);max-width:100%;background:var(--paper);color:var(--ink);box-shadow:-30px 0 80px -30px rgba(0,0,0,.5)}
-dialog.reader::backdrop{background:rgba(9,26,51,.55);backdrop-filter:blur(3px)}
-dialog.reader[open]{animation:slide .45s cubic-bezier(.2,.8,.2,1)}
-@keyframes slide{from{transform:translateX(40px);opacity:0}to{transform:none;opacity:1}}
-.r-bar{position:sticky;top:0;z-index:2;background:rgba(246,242,233,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:14px clamp(20px,4vw,44px);gap:14px}
-.r-bar .crumb{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.r-tools{display:flex;gap:10px;align-items:center}
-.r-close{width:42px;height:42px;border:1px solid var(--line-strong);background:none;border-radius:50%;font-size:20px;line-height:1}
-.r-close:hover{background:var(--ink);color:#fff}
-.r-body{padding:clamp(28px,4vw,52px) clamp(20px,4vw,44px) 60px}
-.r-body .kick{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-.r-body h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:22px}
-.r-body .lead{font-family:var(--serif);font-size:1.32rem;line-height:1.45;color:#22324e;margin:0 0 34px;font-weight:300}
-.r-body h3.sub{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);font-weight:700;margin:40px 0 4px}
-ol.route-steps{list-style:none;margin:0;padding:0;counter-reset:s}
-.route-steps li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:4px 12px;padding:22px 0;border-bottom:1px solid var(--line);position:relative}
-.route-steps li::before{content:counter(s);font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--brass);grid-row:1/3;line-height:1.1}
-.route-steps b{font-family:var(--serif);font-weight:500;font-size:1.28rem;letter-spacing:-.005em}
-.route-steps span{color:#3a4a66;font-size:16px}
-.note{border-left:3px solid var(--brass);background:var(--paper-2);padding:18px 22px;margin:28px 0 0;font-size:15.5px;color:#2b3b57}
-.note b{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-bottom:6px}
-ul.eight{list-style:none;margin:6px 0 0;padding:0;counter-reset:e}
-.eight li{counter-increment:e;display:flex;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15.5px;align-items:baseline;justify-content:space-between}
-.eight li span:first-child::before{content:"0" counter(e);font-family:var(--serif);font-style:italic;color:var(--brass);margin-right:14px}
-.eight .st{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap}
-.eight .st.ok{color:#2f6b3f}
-.r-foot{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-.bn-copy .lead{font-family:var(--bn-serif);font-size:1.18rem;line-height:1.85;font-weight:400}
-.bn-copy h2{font-family:var(--bn-serif);font-weight:500;line-height:1.3;letter-spacing:0;font-size:clamp(1.7rem,3.4vw,2.4rem)}
-.bn-copy .route-steps b{font-family:var(--bn-serif);font-weight:600;font-size:1.12rem}
-.bn-copy .route-steps span{font-family:var(--bn);font-size:1.05rem;line-height:1.85}
-.bn-copy .note{font-family:var(--bn);line-height:1.85;font-size:1.02rem}
-.bn-copy h3.sub{font-family:var(--bn);letter-spacing:0;font-size:1rem}
-.bn-copy .eight li{font-family:var(--bn);font-size:1.02rem}
-
-/* reveal */
-.js .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
-.js .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important}
-  .arc.draw{stroke-dashoffset:0}
-  .js .rv{opacity:1;transform:none}
-  html{scroll-behavior:auto}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=Anek+Bangla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<a class="skip" href="#guides">Skip to career guides</a>
+<a class="skip" href="#main">Skip to content</a>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="mark" viewBox="0 0 100 100">
-      <path fill="#12305f" d="M17 9h42c17 0 26 8 26 21 0 9-5 15-12 18 10 3 17 10 17 21 0 14-10 22-28 22H17z"/>
-      <g fill="none" stroke="#fffdf8" stroke-width="6.2" stroke-linejoin="round" stroke-linecap="butt">
-        <path d="M37 20v64"/>
-        <path d="M37 24h13c9 0 14 5 14 12.5S59 49 50 49H37"/>
-      </g>
-    </symbol>
-    <symbol id="mark-light" viewBox="0 0 100 100">
-      <path fill="#fffdf8" d="M17 9h42c17 0 26 8 26 21 0 9-5 15-12 18 10 3 17 10 17 21 0 14-10 22-28 22H17z"/>
-      <g fill="none" stroke="#091a33" stroke-width="6.2" stroke-linejoin="round">
-        <path d="M37 20v64"/>
-        <path d="M37 24h13c9 0 14 5 14 12.5S59 49 50 49H37"/>
-      </g>
-    </symbol>
-    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></symbol>
-    <symbol id="check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></symbol>
-  </defs>
-</svg>
+<div class="strip"><div class="wrap">
+  <div class="where"><svg class="flag" viewBox="0 0 22 14" aria-hidden="true"><rect width="22" height="14" fill="#006a4e"/><circle cx="9.7" cy="7" r="3.9" fill="#f42a41"/></svg><span><b>Now serving Bangladesh</b> · Gulshan-2, Dhaka</span><span class="next">India · Pakistan · Nepal · Sri Lanka — opening soon</span></div>
+  <div class="right"><a href="tel:+8801711631349">+880 1711 631349</a></div>
+</div></div>
 
-<!-- ======== TOP BAR ======== -->
-<div class="topbar">
-  <div class="wrap">
-    <div class="where">
-      <svg class="flag" viewBox="0 0 22 14" aria-hidden="true"><rect width="22" height="14" fill="#006a4e"/><circle cx="9.7" cy="7" r="3.9" fill="#f42a41"/></svg>
-      <span><strong>Now serving Bangladesh</strong> · Gulshan-2, Dhaka</span>
-      <span class="soon"><b>India · Pakistan · Nepal · Sri Lanka</b> — opening soon</span>
-    </div>
-    <div class="contact">
-      <a href="tel:+8801711631349">+880 1711 631349</a>
-      <a class="mail" href="mailto:appointments@boropool.com">appointments@boropool.com</a>
-    </div>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html" aria-label="BOROPOOL home">
+    <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#fff" d="M17 9h42c17 0 26 8 26 21 0 9-5 15-12 18 10 3 17 10 17 21 0 14-10 22-28 22H17z"/><g fill="none" stroke="#0b2147" stroke-width="6.2" stroke-linejoin="round"><path d="M37 20v64"/><path d="M37 24h13c9 0 14 5 14 12.5S59 49 50 49H37"/></g></svg>
+    <span><b>BOROPOOL</b><small>Global Career Mobility Advisory</small></span>
+  </a>
+  <nav class="main" id="nav" aria-label="Main">
+    <a href="#guides">Career guides</a><a href="#how">How guides work</a><a href="#services">Services</a><a href="#assessment">Assessment</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="hd-r">
+    <div class="lg" role="group" aria-label="Language"><span class="on">EN</span><a class="bn" href="guides/nurses-germany-bn.html" hreflang="bn" lang="bn" title="Read the sample guide in Bangla">বাংলা</a></div>
+    <a class="btn sm" href="#assessment">Book assessment <span class="ar">→</span></a>
+    <button class="menu" id="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav">☰</button>
   </div>
-</div>
+</div></header>
 
-<!-- ======== HEADER ======== -->
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="BOROPOOL home">
-      <svg><use href="#mark"/></svg>
-      <span class="name"><b>BOROPOOL</b><span>Global Career Mobility Advisory</span></span>
-    </a>
-    <nav class="primary" id="nav" aria-label="Main">
-      <a href="#guides">Career guides</a>
-      <a href="#services">Services</a>
-      <a href="#assessment">Career assessment</a>
-      <a href="#approach">Our approach</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="head-actions">
-      <div class="lang" role="group" aria-label="Language">
-        <button type="button" aria-pressed="true" data-ui-lang="en">EN</button>
-        <button type="button" aria-pressed="false" class="bn" data-ui-lang="bn" title="Bangla guides available">বাংলা</button>
-      </div>
-      <a class="btn sm" href="#assessment">Book assessment <span class="arr">→</span></a>
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Menu"><i></i><i></i><i></i></button>
-    </div>
-  </div>
-</header>
+<main id="main">
 
-<main id="top">
-
-<!-- ======== HERO ======== -->
+<!-- HERO: the route finder -->
 <section class="hero">
   <div class="wrap">
+    <p class="intro"><b>BOROPOOL publishes step-by-step guides</b> for skilled professionals from Bangladesh who are weighing a career abroad: what has to happen, in what order, and what it really costs.</p>
+    <h1 class="sentence">I’m
+      <select class="tok" id="selProf" aria-label="Your profession">
+        <option value="Nurses">a nurse</option><option value="Caregivers">a caregiver</option><option value="Engineers">an engineer</option><option value="Skilled trades">a skilled tradesperson</option><option value="Students">a student</option>
+      </select>
+      looking at
+      <select class="tok" id="selCountry" aria-label="Destination country">
+        <option>Germany</option><option>Canada</option><option>Poland</option><option>Australia</option>
+      </select>.</h1>
+    <div class="result" id="result" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- GUIDES: departures board -->
+<section class="sec" id="guides">
+  <div class="wrap split">
+    <div class="l">
+      <h2>Every route we’ve mapped.</h2>
+      <p class="lead">One profession, one country, one guide. Each opens on its own page, with the stages in order and a note on what can go wrong.</p>
+    </div>
     <div>
-      <div class="eyebrow rv">Global Career Mobility Advisory</div>
-      <h1 class="rv">Know the <em class="u">whole&nbsp;path</em> before you take the first&nbsp;step.</h1>
-      <p class="lede rv">Country-by-country career guides for skilled professionals from Bangladesh — what the job pays, whether your qualification is recognised, which exams and language tests stand in the way, and what it will honestly cost.</p>
-      <div class="cta rv">
-        <a class="btn" href="#guides">Explore career guides <span class="arr">→</span></a>
-        <a class="link" href="#assessment">Book a career assessment</a>
+      <div class="filt">
+        <select class="sel" id="fProf" aria-label="Filter by profession"><option value="">All professions</option><option>Nurses</option><option>Caregivers</option><option>Engineers</option><option>Skilled trades</option><option>Students</option></select>
+        <select class="sel" id="fCountry" aria-label="Filter by country"><option value="">All countries</option><option>Canada</option><option>Germany</option><option>Poland</option><option>Australia</option></select>
       </div>
-      <div class="hero-facts rv">
-        <div><b>Since 2020</b>Advising from Dhaka</div>
-        <div><b>6 countries</b>Guides by profession</div>
-        <div><b>বাংলা + English</b>Guides in your language</div>
-      </div>
-    </div>
-
-    <div class="route rv" aria-label="Pathways from Dhaka to Canada, Germany, Poland and Australia">
-      <div class="cap"><span>Dhaka → the world</span><span>Pathway map</span></div>
-      <svg class="map" viewBox="0 0 600 560" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
-        <defs>
-          <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r="1.2" fill="#6f87b3" opacity=".28"/></pattern>
-          <radialGradient id="glow" cx="70%" cy="34%" r="60%"><stop offset="0" stop-color="#1c4a8c" stop-opacity=".55"/><stop offset="1" stop-color="#091a33" stop-opacity="0"/></radialGradient>
-        </defs>
-        <rect width="600" height="560" fill="url(#dots)"/>
-        <rect width="600" height="560" fill="url(#glow)"/>
-        <g stroke="#7f98c4" stroke-opacity=".22" fill="none">
-          <path d="M0 140H600M0 245H600M0 350H600M0 455H600"/>
-          <path d="M100 0V560M200 0V560M300 0V560M400 0V560M500 0V560"/>
-        </g>
-        <!-- arcs from Dhaka (423,214) -->
-        <path class="arc draw" style="--len:700" id="a1" d="M423 214 Q250 20 56 128"/>
-        <path class="arc draw" style="--len:330" id="a2" d="M423 214 Q340 40 252 88"/>
-        <path class="arc draw" style="--len:330" id="a3" d="M423 214 Q380 60 270 90"/>
-        <path class="arc draw" style="--len:300" id="a4" d="M423 214 Q575 250 558 372"/>
-        <!-- nodes -->
-        <g>
-          <circle cx="56" cy="128" r="4.5" fill="#fffdf8"/>
-          <circle cx="252" cy="88" r="4.5" fill="#fffdf8"/>
-          <circle cx="270" cy="90" r="4.5" fill="#fffdf8"/>
-          <circle cx="558" cy="372" r="4.5" fill="#fffdf8"/>
-          <circle class="pulse" cx="423" cy="214" r="7" fill="#d9b66f"/>
-          <circle cx="423" cy="214" r="7" fill="#d9b66f"/>
-          <circle cx="423" cy="214" r="2.6" fill="#091a33"/>
-        </g>
-        <g font-family="Hanken Grotesk, sans-serif" font-size="12" fill="#e8edf6" letter-spacing=".5">
-          <text x="62" y="156" font-weight="600">Toronto</text><text x="62" y="171" font-size="10.5" fill="#8fa6cc">Canada</text>
-          <text x="196" y="68" font-weight="600" text-anchor="middle">Berlin</text><text x="196" y="82" font-size="10.5" fill="#8fa6cc" text-anchor="middle">Germany</text>
-          <text x="296" y="112" font-weight="600">Warsaw</text><text x="296" y="127" font-size="10.5" fill="#8fa6cc">Poland</text>
-          <text x="544" y="372" font-weight="600" text-anchor="end">Sydney</text><text x="544" y="387" font-size="10.5" fill="#8fa6cc" text-anchor="end">Australia</text>
-          <text x="436" y="240" font-weight="700" fill="#d9b66f" font-size="13">Dhaka</text>
-        </g>
-      </svg>
-      <div class="glass">
-        <small>Guide 01 · Most read</small>
-        <strong>Nurses in Germany</strong>
-        <div class="tags"><span class="tag">EN</span><span class="tag bn">বাংলা</span></div>
-      </div>
+      <ul class="board" id="board"></ul>
     </div>
   </div>
 </section>
 
-<!-- ======== CAREER GUIDES ======== -->
-<section class="sec" id="guides" style="padding-top:clamp(48px,6vw,80px)">
+<!-- HOW A GUIDE IS BUILT -->
+<section class="sec how" id="how">
   <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <div class="label"><i>01</i> Career guides</div>
-        <h2>Browse by <em>profession</em> and country.</h2>
-      </div>
-      <p>Each guide follows one profession into one country and answers the same eight questions — written in plain language, in English and, for selected guides, in Bangla.</p>
+    <div class="head">
+      <h2>Every guide follows the same eight stops.</h2>
+      <p class="lead" style="color:#2c3d5c">So you can compare one country with another without relearning the format. Select a stop.</p>
     </div>
-
-    <div class="filters" role="group" aria-label="Filter guides">
-      <div class="filter-row" id="fProf"><span class="k">Profession</span></div>
-      <div class="filter-row" id="fCountry"><span class="k">Country</span></div>
-    </div>
-    <div class="count"><span id="countTxt">6 guides</span><span>Sorted by most read</span></div>
-    <ol class="guides" id="guideList"></ol>
-    <div class="empty" id="empty">No guide matches that combination yet. <a class="link" href="#contact">Tell us which one you need</a></div>
+    <ol class="line lt" id="eight"></ol>
+    <div class="detail" aria-live="polite"><div class="n" id="hn">01</div><p id="ht"></p></div>
+    <p class="note">Inside each published guide these stops become the stages of the route, written for that profession and country.</p>
   </div>
 </section>
 
-<!-- ======== ANATOMY ======== -->
-<section class="sec dark" id="anatomy">
-  <div class="wrap anat">
-    <div class="left">
-      <div class="label"><i>02</i> Inside every guide</div>
-      <h2>Eight questions, <em>answered honestly</em>.</h2>
-      <p>People deciding to work abroad are rarely short of opinions. What they lack is one reliable place that lays out the requirements, the order of steps and the real cost — before money changes hands.</p>
-      <a class="btn on-dark" href="#guides">Open a guide <span class="arr">→</span></a>
+<!-- RULES -->
+<section class="sec rules" id="approach">
+  <div class="wrap">
+    <h2>Realistic expectations, <u>written down.</u></h2>
+    <div class="cols">
+      <div><h3>No guaranteed outcomes</h3><p>Recognition decisions and processing times vary. We plan around ranges and risks and tell you when a route is unlikely to work.</p></div>
+      <div><h3>Every fee explained</h3><p>Government charges, third-party costs and our own fees are listed up front, so there is nothing to discover later.</p></div>
+      <div><h3>Plain language, your language</h3><p>Guides are written to be understood on the first read, in English and, step by step, in Bangla and the other languages of the region.</p></div>
     </div>
-    <ol class="ledger">
-      <li><h4>Where the demand is</h4><p>Which roles, in which regions, and why employers are hiring from abroad.</p></li>
-      <li><h4>What you earn, and what life costs</h4><p>Typical pay set against rent, tax and everyday spending — not headline salaries alone.</p></li>
-      <li><h4>Whether your qualification counts</h4><p>How degrees and diplomas from Bangladesh are assessed, and what happens if they fall short.</p></li>
-      <li><h4>Registration and licensing</h4><p>The professional body, the paperwork, and the sequence it must be done in.</p></li>
-      <li><h4>Language tests</h4><p>Which test, which level, and how long preparation realistically takes.</p></li>
-      <li><h4>Exams and training</h4><p>Bridging courses, knowledge tests and supervised practice periods.</p></li>
-      <li><h4>The visa pathway</h4><p>Which permit applies, who applies for it, and the documents each stage needs.</p></li>
-      <li><h4>The total cost</h4><p>Every fee, test and travel expense laid out end to end, so there are no surprises later.</p></li>
-    </ol>
   </div>
 </section>
 
-<!-- ======== SERVICES ======== -->
+<!-- SERVICES -->
 <section class="sec" id="services">
-  <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <div class="label"><i>03</i> Services</div>
-        <h2>Guidance from <em>first question</em> to visa file.</h2>
-      </div>
-      <p>BOROPOOL is a Bangladesh-based consulting firm. We help individuals choose a destination, plan the route and prepare an application that holds up.</p>
+  <div class="wrap split">
+    <div class="l">
+      <h2>When you want a person, not just a page.</h2>
+      <p class="lead">BOROPOOL is a Bangladesh-based consulting firm. Where a guide stops, advisers pick up.</p>
     </div>
-    <div class="svc">
-      <article class="rv">
-        <span class="n">i.</span>
-        <h3>Country selection & pathway planning</h3>
-        <p>We compare destinations against your qualification, experience, finances and timeline, then map one route in the right order.</p>
-        <ul><li>Canada</li><li>Germany</li><li>Poland</li><li>Australia</li></ul>
-      </article>
-      <article class="rv">
-        <span class="n">ii.</span>
-        <h3>Work permit & immigration</h3>
-        <p>Employer-backed and skilled-worker routes, including Canada LMIA, Germany skilled-worker visas and Poland work permits.</p>
-        <ul><li>Canada LMIA</li><li>Germany</li><li>Poland</li></ul>
-      </article>
-      <article class="rv">
-        <span class="n">iii.</span>
-        <h3>Study abroad</h3>
-        <p>Programme shortlisting, admission applications and funding proof for students aiming at Canada, the USA or Australia.</p>
-        <ul><li>Canada</li><li>USA</li><li>Australia</li></ul>
-      </article>
-      <article class="rv">
-        <span class="n">iv.</span>
-        <h3>Admission & visa process</h3>
-        <p>Document checks, application review and interview preparation, so the file is complete before it is submitted.</p>
-        <ul><li>Documents</li><li>Review</li><li>Interview prep</li></ul>
-      </article>
-    </div>
+    <ul class="svc">
+      <li><h3>Country selection and pathway planning</h3><div><p>We compare destinations against your qualification, experience, finances and timeline, then map one route in the right order.</p><div class="t"><span>Canada</span><span>Germany</span><span>Poland</span><span>Australia</span></div></div></li>
+      <li><h3>Work permit and immigration</h3><div><p>Employer-backed and skilled-worker routes, including Canada LMIA, Germany skilled-worker visas and Poland work permits.</p><div class="t"><span>Canada LMIA</span><span>Germany</span><span>Poland</span></div></div></li>
+      <li><h3>Study abroad</h3><div><p>Programme shortlisting, admission applications and funding proof for students aiming at Canada, the USA or Australia.</p><div class="t"><span>Canada</span><span>USA</span><span>Australia</span></div></div></li>
+      <li><h3>Admission and visa process</h3><div><p>Document checks, application review and interview preparation, so the file is complete before it is submitted.</p><div class="t"><span>Documents</span><span>Review</span><span>Interview prep</span></div></div></li>
+    </ul>
   </div>
 </section>
 
-<!-- ======== ASSESSMENT ======== -->
+<!-- ASSESSMENT -->
 <section class="sec assess" id="assessment">
-  <div class="wrap grid">
-    <div class="copy">
-      <div class="label"><i>04</i> Career assessment</div>
-      <h2>Start with a <em>straight conversation</em>.</h2>
-      <p>An initial career assessment tells you which pathways are open to you, which are not yet, and what to do next. Tell us a little about your background and pick a time that suits you.</p>
-      <ul class="points">
-        <li><svg><use href="#check"/></svg><span>Choose your language — Bangla or English</span></li>
-        <li><svg><use href="#check"/></svg><span>Works with the Bangladesh working week, Sunday to Thursday</span></li>
-        <li><svg><use href="#check"/></svg><span>A written summary of your options afterwards</span></li>
-      </ul>
+  <div class="wrap split">
+    <div class="l">
+      <h2>Start with a straight conversation.</h2>
+      <p class="lead">An initial career assessment tells you which pathways are open to you, which are not yet, and what to do next. Four short questions, then pick a time.</p>
     </div>
+    <div class="step" id="step">
+      <div class="bar" aria-hidden="true"><span class="on">1 Profession</span><span>2 Destination</span><span>3 Language</span><span>4 Time</span></div>
 
-    <form class="card" id="assessForm" novalidate>
-      <div class="fields">
-        <div class="steps" aria-hidden="true"><i class="on"></i><i id="s2"></i><i id="s3"></i></div>
-        <div class="two">
-          <div class="fld">
-            <label for="prof">Your profession</label>
-            <select id="prof"><option>Nurse</option><option>Caregiver</option><option>Engineer</option><option>Skilled tradesperson</option><option>Student</option><option>Other</option></select>
-          </div>
-          <div class="fld">
-            <label for="exp">Experience</label>
-            <select id="exp"><option>Less than 2 years</option><option>2–5 years</option><option>5–10 years</option><option>10+ years</option></select>
-          </div>
-        </div>
-        <div class="fld">
-          <span class="l">Destinations you are considering</span>
-          <div class="pills" id="dest">
-            <button type="button" class="pill" aria-pressed="true">Canada</button>
-            <button type="button" class="pill" aria-pressed="false">Germany</button>
-            <button type="button" class="pill" aria-pressed="false">Poland</button>
-            <button type="button" class="pill" aria-pressed="false">Australia</button>
-            <button type="button" class="pill" aria-pressed="false">Not sure yet</button>
-          </div>
-        </div>
-        <div class="fld">
-          <span class="l">Preferred language</span>
-          <div class="pills" id="plang">
-            <button type="button" class="pill" aria-pressed="true">English</button>
-            <button type="button" class="pill bn" aria-pressed="false">বাংলা</button>
-          </div>
-        </div>
-        <div class="fld">
-          <span class="l">Pick a time (Dhaka time)</span>
-          <div class="slotgrid" id="slots">
-            <button type="button" class="pill slot" aria-pressed="false"><b>Sun</b>10:00</button>
-            <button type="button" class="pill slot" aria-pressed="false"><b>Sun</b>15:00</button>
-            <button type="button" class="pill slot" aria-pressed="false"><b>Mon</b>11:00</button>
-            <button type="button" class="pill slot" disabled><b>Mon</b>16:00</button>
-            <button type="button" class="pill slot" aria-pressed="false"><b>Tue</b>10:00</button>
-            <button type="button" class="pill slot" aria-pressed="false"><b>Tue</b>14:00</button>
-            <button type="button" class="pill slot" disabled><b>Wed</b>11:00</button>
-            <button type="button" class="pill slot" aria-pressed="false"><b>Thu</b>12:00</button>
-          </div>
-        </div>
-        <div class="two">
-          <div class="fld"><label for="nm">Full name</label><input id="nm" type="text" autocomplete="name" placeholder="As on your passport"></div>
-          <div class="fld"><label for="ph">WhatsApp number</label><input id="ph" type="tel" autocomplete="tel" placeholder="+880"></div>
-        </div>
-        <div class="form-foot">
-          <small>Your details are used only to arrange this conversation.</small>
-          <button class="btn" type="submit">Request assessment <span class="arr">→</span></button>
+      <div class="pane on" data-p="0">
+        <h3>What is your profession?</h3><p class="hint">Choose the closest match.</p>
+        <div class="opts" data-k="prof">
+          <button type="button" class="opt" aria-pressed="false">Nurse</button><button type="button" class="opt" aria-pressed="false">Caregiver</button><button type="button" class="opt" aria-pressed="false">Engineer</button><button type="button" class="opt" aria-pressed="false">Skilled tradesperson</button><button type="button" class="opt" aria-pressed="false">Student</button><button type="button" class="opt" aria-pressed="false">Something else</button>
         </div>
       </div>
-      <div class="done" role="status">
-        <svg width="34" height="34" style="color:var(--brass)"><use href="#check"/></svg>
+      <div class="pane" data-p="1">
+        <h3>Where are you thinking of going?</h3><p class="hint">Pick as many as you like.</p>
+        <div class="opts" data-k="dest" data-multi="1">
+          <button type="button" class="opt" aria-pressed="false">Canada</button><button type="button" class="opt" aria-pressed="false">Germany</button><button type="button" class="opt" aria-pressed="false">Poland</button><button type="button" class="opt" aria-pressed="false">Australia</button><button type="button" class="opt" aria-pressed="false">Not sure yet</button>
+        </div>
+      </div>
+      <div class="pane" data-p="2">
+        <h3>Which language should we use?</h3><p class="hint">Your assessment and written summary will be in this language.</p>
+        <div class="opts" data-k="lang">
+          <button type="button" class="opt" aria-pressed="false">English</button><button type="button" class="opt bn" aria-pressed="false" lang="bn">বাংলা</button>
+        </div>
+      </div>
+      <div class="pane" data-p="3">
+        <h3>Pick a time, Dhaka time.</h3><p class="hint">Sunday to Thursday slots, shown as an example of the live calendar.</p>
+        <div class="opts" data-k="slot">
+          <button type="button" class="opt" aria-pressed="false">Sun · 10:00</button><button type="button" class="opt" aria-pressed="false">Sun · 15:00</button><button type="button" class="opt" aria-pressed="false">Mon · 11:00</button><button type="button" class="opt" disabled>Mon · 16:00</button><button type="button" class="opt" aria-pressed="false">Tue · 10:00</button><button type="button" class="opt" aria-pressed="false">Tue · 14:00</button><button type="button" class="opt" aria-pressed="false">Thu · 12:00</button>
+        </div>
+        <div class="row2">
+          <label>Full name<input type="text" id="nm" autocomplete="name" placeholder="As on your passport"></label>
+          <label>WhatsApp number<input type="tel" id="ph" autocomplete="tel" placeholder="+880"></label>
+        </div>
+      </div>
+      <div class="pane sent" data-p="4">
         <h3>Request received.</h3>
-        <p>In the live website this message goes straight to the BOROPOOL team, and the visitor receives a confirmation by email and WhatsApp.</p>
-        <button type="button" class="link" id="again" style="background:none;border-top:0;border-left:0;border-right:0">Fill the form again</button>
+        <p class="hint">In the live website this goes straight to the BOROPOOL team and the visitor receives a confirmation by email and WhatsApp. Nothing was sent from this preview.</p>
+        <button type="button" class="btn ink" id="again">Start again</button>
       </div>
-    </form>
-  </div>
-</section>
 
-<!-- ======== APPROACH ======== -->
-<section class="quote" id="approach">
-  <div class="wrap">
-    <div class="label"><i>05</i> Our approach</div>
-    <blockquote class="rv">We focus on <em>real processes</em>, realistic expectations and long-term outcomes.</blockquote>
-    <div class="pr">
-      <div class="rv"><h3>Clarity</h3><p>Requirements, order of steps and timelines set out plainly, so you understand each stage before you commit to it.</p></div>
-      <div class="rv"><h3>Transparency</h3><p>Every fee and third-party cost is explained up front. If a route is unlikely to work for you, we say so.</p></div>
-      <div class="rv"><h3>Realistic expectations</h3><p>Recognition outcomes and processing times vary. We plan around ranges and risks, never promises.</p></div>
+      <div class="pane on" id="nav2" style="padding-top:0;display:block">
+        <div class="nav2"><button type="button" class="back" id="back" hidden>← Back</button><span class="fine" id="stepNote">Step 1 of 4</span><button type="button" class="btn" id="next" disabled>Continue <span class="ar">→</span></button></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ======== LANGUAGES ======== -->
-<section class="langs-band" id="languages">
-  <div class="wrap">
-    <div class="label"><i>06</i> Languages</div>
-    <h2>A guide you can <em>read in your own language</em>.</h2>
-    <div class="lgrid" aria-label="Supported languages">
-      <div class="live"><span class="n">English</span><small>Default</small></div>
-      <div class="live"><span class="n bnn">বাংলা</span><small>Guides live</small></div>
-      <div><span class="n dv">हिन्दी</span><small>Hindi</small></div>
-      <div><span class="n rtl">اردو</span><small>Urdu · RTL</small></div>
-      <div><span class="n dv">नेपाली</span><small>Nepali</small></div>
-      <div><span class="n ta">தமிழ்</span><small>Tamil</small></div>
-      <div><span class="n si">සිංහල</span><small>Sinhala</small></div>
-      <div><span class="n rtl">پښتو</span><small>Pashto · RTL</small></div>
-      <div><span class="n" style="font-family:'MV Boli','Faruma','Noto Sans Thaana',sans-serif">ދިވެހި</span><small>Dhivehi</small></div>
-    </div>
-    <div class="lnote"><span>Two sample guides in this preview are available in Bangla. Open one and switch language inside the guide.</span><span>The full build adds right-to-left layout for Urdu and Pashto.</span></div>
-  </div>
-</section>
-
-<!-- ======== CONTACT ======== -->
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap">
-    <div>
-      <div class="label"><i>07</i> Contact</div>
-      <h2>Talk to us <em>before</em> you pay anyone.</h2>
-      <p>Whether you are comparing countries, checking an agent's promise or ready to plan your route, write to us. We reply in Bangla or English.</p>
-      <a class="wa" href="https://wa.me/8801711631349" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M9 7.6c.3-.3.7-.3.9.1l.8 1.800c.1.3 0 .5-.2.7l-.6.7c.8 1.500 1.800 2.300 3.200 3l.7-.8c.2-.2.5-.3.8-.1l1.700.8c.3.2.4.5.2.9-.4.9-1.200 1.300-2.200 1.200-3.400-.5-5.800-3.100-6.200-5.600-.1-.9.3-1.800.9-2.700z"/></svg>
-        Message us on WhatsApp</a>
+    <p class="big">Talk to us before you pay anyone. <a href="mailto:appointments@boropool.com">appointments@boropool.com</a></p>
+    <div class="grid">
+      <div><h4>Office</h4><p>Road 62, House 4/B<br>Gulshan-2, Dhaka 1212<br>Bangladesh</p></div>
+      <div><h4>Phone and WhatsApp</h4><p><a href="tel:+8801711631349">+880 1711 631349</a></p>
+        <a class="wa" href="https://wa.me/8801711631349" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M9 7.6c.3-.3.7-.3.9.1l.8 1.8c.1.3 0 .5-.2.7l-.6.7c.8 1.5 1.8 2.3 3.2 3l.7-.8c.2-.2.5-.3.8-.1l1.7.8c.3.2.4.5.2.9-.4.9-1.2 1.3-2.2 1.2-3.4-.5-5.8-3.1-6.2-5.6-.1-.9.3-1.8.9-2.7z"/></svg>Message us</a></div>
+      <div><h4>Follow</h4><p><a href="https://www.linkedin.com/company/boropool/" rel="noopener">BOROPOOL on LinkedIn</a></p></div>
     </div>
-    <dl>
-      <div><dt>Office</dt><dd>Road 62, House 4/B<br>Gulshan-2, Dhaka 1212, Bangladesh</dd></div>
-      <div><dt>Phone</dt><dd><a href="tel:+8801711631349">+880 1711 631349</a></dd></div>
-      <div><dt>Email</dt><dd><a href="mailto:appointments@boropool.com">appointments@boropool.com</a></dd></div>
-      <div><dt>Follow</dt><dd><a href="https://www.linkedin.com/company/boropool/" rel="noopener">BOROPOOL on LinkedIn</a></dd></div>    </dl>
   </div>
 </section>
 </main>
 
-<footer class="site">
-  <div class="wrap">
-    <div class="foot-brand"><svg><use href="#mark-light"/></svg> BOROPOOL</div>
-    <div>© 2026 Boropool Ltd. · Global Career Mobility Advisory · Dhaka, Bangladesh</div>
-    <div>BOROPOOL sample website v3 by <a href="https://aalisoft.com" rel="noopener">aaliSoft</a> · Preliminary design · Demonstration content · <a href="admin.html">Admin dashboard preview</a></div>
-  </div>
-</footer>
+<footer class="site"><div class="wrap"><span>© 2026 Boropool Ltd. · Dhaka, Bangladesh</span><span>BOROPOOL sample website v3 by <a href="https://aalisoft.com" rel="noopener">aaliSoft</a> · Preliminary design · Demonstration content · <a href="admin.html">Admin dashboard preview</a></span></div></footer>
 
-<!-- ======== GUIDE READER ======== -->
-<dialog class="reader" id="reader" aria-labelledby="rTitle">
-  <div class="r-bar">
-    <span class="crumb" id="rCrumb">Career guide</span>
-    <div class="r-tools">
-      <div class="lang" id="rLang" role="group" aria-label="Guide language" hidden>
-        <button type="button" data-g="en" aria-pressed="true">EN</button>
-        <button type="button" data-g="bn" class="bn" aria-pressed="false">বাংলা</button>
-      </div>
-      <button class="r-close" id="rClose" aria-label="Close guide">×</button>
-    </div>
-  </div>
-  <div class="r-body" id="rBody"></div>
-</dialog>
-
-<script>
-document.documentElement.classList.add('js');
-
-/* ---------- guide data ---------- */
-const EIGHT = ['Where the demand is','Salary and cost of living','Qualification recognition','Registration and licensing','Language tests','Exams and training','The visa pathway','Total cost, end to end'];
-
-const GUIDES = [
- { id:'de-nurse', title:'Nurses in Germany', prof:'Nurses', country:'Germany', langs:['EN','BN'], read:'12 min read',
-   sum:'Recognition of your nursing qualification, German at B2 and the visa route — in the right order.',
-   status:[1,0,1,1,1,0,1,0],
-   en:{ lead:'Germany recruits foreign nurses for hospitals and care homes. The route usually combines three things: recognition of your nursing qualification, German language at B2 level, and a work or recognition visa.',
-        steps:[
-         ['Check your qualification','Your Bangladesh Nursing and Midwifery Council registration and your diploma or BSc are compared with German nursing training. The outcome is full recognition, or an adaptation course or knowledge test.'],
-         ['Learn German properly','Professional registration generally needs B2. Plan for many months of structured study rather than a quick course.'],
-         ['Find an employer and read the contract','Check pay, hours, and whether the employer supports you through the recognition process.'],
-         ['Apply for the visa','Gather documents together and apply at the embassy once recognition and contract are clear.'],
-         ['Arrive and complete registration','Finish local registration and any remaining steps of the recognition process.']],
-        note:'Recognition decisions and timelines depend on the state authority and on your documents. We plan with ranges and risks, not promises.' },
-   bn:{ title:'জার্মানিতে নার্স হিসেবে কাজ: ধাপে ধাপে গাইড',
-        lead:'জার্মানির হাসপাতাল ও কেয়ার হোমে বিদেশি নার্সদের চাহিদা রয়েছে। সাধারণত এই পথে তিনটি বিষয় একসঙ্গে এগোয়: আপনার নার্সিং যোগ্যতার স্বীকৃতি, জার্মান ভাষায় B2 স্তরের দক্ষতা এবং কাজের বা স্বীকৃতির ভিসা।',
-        steps:[
-         ['যোগ্যতা যাচাই করুন','বাংলাদেশ নার্সিং অ্যান্ড মিডওয়াইফারি কাউন্সিলের নিবন্ধন এবং আপনার ডিপ্লোমা বা বিএসসি সনদ জার্মান নার্সিং প্রশিক্ষণের সঙ্গে তুলনা করা হয়। ফল হতে পারে পূর্ণ স্বীকৃতি, অথবা অভিযোজন কোর্স কিংবা জ্ঞান পরীক্ষা।'],
-         ['ভালোভাবে জার্মান শিখুন','পেশাগত নিবন্ধনের জন্য সাধারণত B2 প্রয়োজন হয়। দ্রুত কোনো কোর্স নয়, বরং নিয়মিত ও কাঠামোবদ্ধ পড়াশোনার জন্য যথেষ্ট সময় রাখুন।'],
-         ['নিয়োগকর্তা খুঁজুন ও চুক্তি পড়ুন','বেতন, কাজের সময় এবং স্বীকৃতি প্রক্রিয়ায় নিয়োগকর্তা সহায়তা করবেন কি না, তা চুক্তিতে স্পষ্ট আছে কি না দেখে নিন।'],
-         ['ভিসার আবেদন করুন','স্বীকৃতি ও চুক্তি পরিষ্কার হলে সব কাগজপত্র একসঙ্গে গুছিয়ে দূতাবাসে আবেদন করুন।'],
-         ['পৌঁছে নিবন্ধন সম্পন্ন করুন','স্থানীয় নিবন্ধন এবং স্বীকৃতি প্রক্রিয়ার বাকি ধাপগুলো শেষ করুন।']],
-        note:'স্বীকৃতির সিদ্ধান্ত ও সময় সংশ্লিষ্ট রাজ্যের কর্তৃপক্ষ এবং আপনার কাগজপত্রের ওপর নির্ভর করে। আমরা প্রতিশ্রুতি দিই না; বাস্তবসম্মত সীমা ও ঝুঁকি ধরে পরিকল্পনা করি।',
-        sub:'যা এই গাইডে পাবেন', noteLabel:'বাস্তব প্রত্যাশা', stepsLabel:'পাঁচটি ধাপে পথ',
-        eight:['চাহিদা কোথায়','বেতন ও জীবনযাত্রার খরচ','যোগ্যতার স্বীকৃতি','নিবন্ধন ও লাইসেন্স','ভাষা পরীক্ষা','পরীক্ষা ও প্রশিক্ষণ','ভিসা প্রক্রিয়া','সব মিলিয়ে মোট খরচ'] } },
-
- { id:'ca-care', title:'Caregivers in Canada', prof:'Caregivers', country:'Canada', langs:['EN','BN'], read:'10 min read',
-   sum:'Which caregiver programme applies, what language scores you need and how an employer offer fits in.',
-   status:[1,0,1,0,1,0,1,0],
-   en:{ lead:'Canada’s caregiver immigration programmes have changed several times in recent years. Before you spend anything, the first job is to confirm which programme is open today and whether your profile fits it.',
-        steps:[
-         ['Confirm the current programme','Rules, caps and eligibility change. We check the latest official criteria before advising any route.'],
-         ['Prove your language level','Accepted English or French test results are required. Your score decides which options are realistic.'],
-         ['Document education and experience','Certificates, training records and verifiable work history are assembled and checked early.'],
-         ['Employer offer and LMIA','Some routes need a job offer, and some of those need a Labour Market Impact Assessment arranged by the employer.'],
-         ['Apply and prepare to settle','A complete application, then practical planning for arrival, housing and the first months.']],
-        note:'Never pay for a “guaranteed” job offer. A genuine employer does not charge you for it, and any fee should be explained and documented.' },
-   bn:{ title:'কানাডায় কেয়ারগিভার: পথ ও প্রস্তুতি',
-        lead:'কানাডার কেয়ারগিভার ইমিগ্রেশন কর্মসূচি সাম্প্রতিক বছরগুলোতে একাধিকবার বদলেছে। কোনো খরচ করার আগে প্রথম কাজ হলো দেখে নেওয়া আজ কোন কর্মসূচি চালু আছে এবং আপনার প্রোফাইল তাতে মানায় কি না।',
-        steps:[
-         ['বর্তমান কর্মসূচি নিশ্চিত করুন','নিয়ম, সীমা ও যোগ্যতার শর্ত বদলায়। পরামর্শ দেওয়ার আগে আমরা সর্বশেষ সরকারি শর্ত যাচাই করি।'],
-         ['ভাষার দক্ষতা প্রমাণ করুন','গ্রহণযোগ্য ইংরেজি বা ফরাসি পরীক্ষার ফল লাগে। আপনার স্কোরই ঠিক করে কোন পথ বাস্তবসম্মত।'],
-         ['শিক্ষা ও অভিজ্ঞতার কাগজ গুছিয়ে নিন','সনদ, প্রশিক্ষণের নথি এবং যাচাইযোগ্য কাজের ইতিহাস শুরুতেই সংগ্রহ ও পরীক্ষা করা হয়।'],
-         ['চাকরির প্রস্তাব ও এলএমআইএ','কিছু পথে চাকরির প্রস্তাব লাগে, আবার কিছুতে নিয়োগকর্তাকে লেবার মার্কেট ইমপ্যাক্ট অ্যাসেসমেন্ট করাতে হয়।'],
-         ['আবেদন ও বসবাসের প্রস্তুতি','সম্পূর্ণ আবেদন জমা দেওয়ার পর পৌঁছানো, বাসস্থান ও প্রথম কয়েক মাসের ব্যবহারিক পরিকল্পনা।']],
-        note:'“নিশ্চিত” চাকরির প্রস্তাবের জন্য কখনো টাকা দেবেন না। প্রকৃত নিয়োগকর্তা এর জন্য আপনার কাছে অর্থ নেন না, আর কোনো ফি থাকলে তা স্পষ্টভাবে ব্যাখ্যা করে নথিভুক্ত হওয়া উচিত।',
-        sub:'যা এই গাইডে পাবেন', noteLabel:'সতর্কতা', stepsLabel:'পাঁচটি ধাপে পথ',
-        eight:['চাহিদা কোথায়','বেতন ও জীবনযাত্রার খরচ','যোগ্যতার স্বীকৃতি','নিবন্ধন ও লাইসেন্স','ভাষা পরীক্ষা','পরীক্ষা ও প্রশিক্ষণ','ভিসা প্রক্রিয়া','সব মিলিয়ে মোট খরচ'] } },
-
- { id:'de-eng', title:'Engineers in Germany', prof:'Engineers', country:'Germany', langs:['EN'], read:'11 min read',
-   sum:'The EU Blue Card and skilled-worker routes, degree recognition and salary thresholds explained.',
-   status:[1,0,1,0,0,0,1,0],
-   en:{ lead:'Engineers usually enter Germany through the EU Blue Card or a skilled-worker route. Which one applies depends on your degree, how it is recognised, and the salary threshold set for the year.',
-        steps:[['Check your degree’s status','Confirm how your university and degree are rated in Germany’s recognition database.'],['Match a role to the threshold','A job offer must meet the salary requirement for the route you choose.'],['Language requirements','These depend on the employer and the role; many technical teams work in English.'],['Apply for the visa','Prepare contract, degree evidence and passport documents together.']],
-        note:'Thresholds and rules are updated regularly. We confirm current figures before you rely on them.' } },
-
- { id:'pl-trades', title:'Skilled trades in Poland', prof:'Skilled trades', country:'Poland', langs:['EN'], read:'9 min read',
-   sum:'How to check an employer, understand the permit type and read a contract before you pay anyone.',
-   status:[1,0,0,0,0,0,1,0],
-   en:{ lead:'Poland hires skilled tradespeople through employer-sponsored work permits. The legitimacy of the employer, the permit type and the terms of the contract matter more than any agent’s promise.',
-        steps:[['Verify the employer','Confirm the company exists, is registered and has a record of hiring from abroad.'],['Understand the permit','Know which permit applies and who applies for it — you or the employer.'],['Read the contract line by line','Pay, hours, accommodation and deductions should be written down and match what you were told.'],['Visa and arrival','Prepare documents, travel and the first weeks on the ground.']],
-        note:'If an agent asks for large payments before a verified offer exists, stop and speak to us first.' } },
-
- { id:'au-nurse', title:'Nurses in Australia', prof:'Nurses', country:'Australia', langs:['EN'], read:'12 min read',
-   sum:'Qualification assessment, English-language evidence and registration with the national regulator.',
-   status:[1,0,1,1,1,0,1,0],
-   en:{ lead:'Nursing in Australia runs through registration with the national regulator before you can practise. Assessment of your qualification comes first, and English-language evidence follows.',
-        steps:[['Qualification assessment','Your education is assessed against Australian standards.'],['English-language evidence','Accepted test results at the required level.'],['Registration','Apply to the regulator and complete any bridging requirements.'],['Visa pathway','Choose the visa route that fits your registration status and employer.']],
-        note:'Requirements differ by state and change over time. The full guide will carry the current official links.' } },
-
- { id:'ca-study', title:'Master’s study in Canada', prof:'Students', country:'Canada', langs:['EN'], read:'10 min read',
-   sum:'Shortlisting programmes, proving funds and applying for a study permit without wasted deposits.',
-   status:[1,0,0,0,1,0,1,0],
-   en:{ lead:'A Canadian study permit begins with an admission letter from a designated institution, and a realistic budget for tuition and living costs.',
-        steps:[['Shortlist programmes','Match programmes to your background, budget and the career you want afterwards.'],['Admission','Prepare academic documents, language evidence and a clear statement of purpose.'],['Proof of funds','Show tuition and living costs in the form the authorities expect.'],['Study permit','Submit a complete application and prepare for any interview.']],
-        note:'Study-permit rules have tightened. We check current limits before you pay any deposit.' } }
-];
-
-const PROFS = ['All','Nurses','Caregivers','Engineers','Skilled trades','Students'];
-const COUNTRIES = ['All','Canada','Germany','Poland','Australia'];
-let fp='All', fc='All';
-
-const $ = s=>document.querySelector(s);
-const list = $('#guideList');
-
-function mkChips(el, items, key){
-  items.forEach(t=>{
-    const b=document.createElement('button');
-    b.type='button'; b.className='chip'; b.textContent=t;
-    b.setAttribute('aria-pressed', t==='All');
-    b.addEventListener('click',()=>{
-      if(key==='p') fp=t; else fc=t;
-      el.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed', c===b));
-      render();
-    });
-    el.appendChild(b);
-  });
-}
-mkChips($('#fProf'),PROFS,'p');
-mkChips($('#fCountry'),COUNTRIES,'c');
-
-function render(){
-  list.innerHTML='';
-  let n=0;
-  GUIDES.forEach((g,i)=>{
-    const show=(fp==='All'||g.prof===fp)&&(fc==='All'||g.country===fc);
-    if(!show) return; n++;
-    const li=document.createElement('li'); li.className='guide';
-    li.innerHTML=`<button type="button" data-id="${g.id}" aria-label="Open guide: ${g.title}">
-      <span class="num">${String(i+1).padStart(2,'0')}</span>
-      <span><h3>${g.title}</h3><span class="sum">${g.sum}</span></span>
-      <span class="meta"><b>${g.country}</b><span>${g.prof} · ${g.read}</span></span>
-      <span class="langs">${g.langs.map(l=>l==='BN'?'<span class="tag bn">বাংলা</span>':'<span class="tag">EN</span>').join('')}</span>
-      <span class="go" aria-hidden="true"><svg width="20" height="20"><use href="#arrow"/></svg></span>
-    </button>`;
-    li.querySelector('button').addEventListener('click',()=>openGuide(g.id));
-    list.appendChild(li);
-  });
-  $('#countTxt').textContent = n+(n===1?' guide':' guides');
-  $('#empty').style.display = n? 'none':'block';
-}
-render();
-
-/* ---------- reader ---------- */
-const dlg=$('#reader'), body=$('#rBody'), rLang=$('#rLang');
-let cur=null, curLang='en';
-
-function openGuide(id, lang){
-  cur=GUIDES.find(g=>g.id===id);
-  curLang = lang || 'en';
-  if(curLang==='bn' && !cur.bn) curLang='en';
-  rLang.hidden = !cur.bn;
-  paint();
-  dlg.showModal();
-  dlg.scrollTop=0; body.scrollTop=0;
-}
-function paint(){
-  const g=cur, bn=curLang==='bn';
-  const c = bn ? g.bn : g.en;
-  const full = !!g.bn;
-  $('#rCrumb').textContent = bn ? 'ক্যারিয়ার গাইড' : 'Career guide · '+g.country;
-  rLang.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.g===curLang));
-  const eightList = (bn? g.bn.eight : EIGHT).map((t,i)=>{
-    const ok=g.status[i]; const lbl = bn ? (ok?'নমুনা আছে':'পূর্ণ গাইডে') : (ok?'Outlined here':'In full guide');
-    return `<li><span>${t}</span><span class="st ${ok?'ok':''}">${lbl}</span></li>`;
-  }).join('');
-  body.className = 'r-body'+(bn?' bn-copy':'');
-  body.innerHTML = `
-    <div class="kick"><span class="tag">${g.country}</span><span class="tag">${g.prof}</span>${g.langs.includes('BN')?'<span class="tag bn">বাংলা</span>':''}<span class="tag">${g.read}</span></div>
-    <h2 id="rTitle">${bn? c.title : g.title}</h2>
-    <p class="lead">${c.lead}</p>
-    <h3 class="sub">${bn? c.stepsLabel : 'The route in '+(c.steps.length===5?'five':'four')+' steps'}</h3>
-    <ol class="route-steps">${c.steps.map(s=>`<li><b>${s[0]}</b><span>${s[1]}</span></li>`).join('')}</ol>
-    <div class="note"><b>${bn? c.noteLabel : 'Realistic expectations'}</b>${c.note}</div>
-    <h3 class="sub">${bn? c.sub : 'What the full guide covers'}</h3>
-    <ul class="eight">${eightList}</ul>
-    <div class="r-foot">
-      <a class="btn" href="#assessment" data-close>${bn?'ক্যারিয়ার অ্যাসেসমেন্ট বুক করুন':'Book a career assessment'} <span class="arr">→</span></a>
-      ${full?'':'<span style="font-size:13px;color:var(--muted)">Sample outline — full guide in production</span>'}
-    </div>`;
-  body.querySelectorAll('[data-close]').forEach(a=>a.addEventListener('click',()=>dlg.close()));
-}
-rLang.addEventListener('click',e=>{
-  const b=e.target.closest('button'); if(!b) return;
-  curLang=b.dataset.g; paint();
-});
-$('#rClose').addEventListener('click',()=>dlg.close());
-dlg.addEventListener('click',e=>{ if(e.target===dlg) dlg.close(); });
-dlg.addEventListener('close',()=>{document.documentElement.style.overflow=''});
-dlg.addEventListener('show',()=>{});
-const _show=dlg.showModal.bind(dlg);
-dlg.showModal=function(){document.documentElement.style.overflow='hidden';_show()};
-
-/* header UI language toggle: jump to Bangla guides */
-document.querySelectorAll('[data-ui-lang]').forEach(b=>b.addEventListener('click',()=>{
-  if(b.dataset.uiLang==='bn'){
-    openGuide('de-nurse','bn');
-  }
-}));
-
-/* ---------- mobile nav ---------- */
-const mb=$('#menuBtn'), nav=$('#nav');
-mb.addEventListener('click',()=>{const o=nav.classList.toggle('open'); mb.setAttribute('aria-expanded',o)});
-nav.addEventListener('click',e=>{ if(e.target.closest('a')){nav.classList.remove('open'); mb.setAttribute('aria-expanded',false)} });
-
-/* ---------- assessment form ---------- */
-const form=$('#assessForm');
-function single(id){const g=$(id); g.addEventListener('click',e=>{const b=e.target.closest('button'); if(!b||b.disabled) return; g.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed', x===b)); progress();});}
-single('#plang'); single('#slots');
-$('#dest').addEventListener('click',e=>{const b=e.target.closest('button'); if(!b) return; b.setAttribute('aria-pressed', b.getAttribute('aria-pressed')!=='true'); progress();});
-function progress(){
-  const slot=$('#slots [aria-pressed="true"]');
-  $('#s2').classList.toggle('on', !!$('#dest [aria-pressed="true"]'));
-  $('#s3').classList.toggle('on', !!slot);
-}
-['#prof','#exp'].forEach(s=>$(s).addEventListener('change',progress));
-form.addEventListener('submit',e=>{e.preventDefault(); form.classList.add('sent');});
-$('#again').addEventListener('click',()=>{form.classList.remove('sent'); form.reset();});
-
-/* ---------- reveal ---------- */
-/* hero reveals on load, staggered, without waiting on the observer */
-document.querySelectorAll('.hero .rv').forEach((el,i)=>setTimeout(()=>el.classList.add('in'),80+i*110));
-if('IntersectionObserver' in window){
-  const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
-  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-}else{document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'))}
-</script>
+<script src="data.js"></script>
+<script src="home.js"></script>
 </body>
 </html>
