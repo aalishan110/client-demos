@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOROPOOL Admin — Preview</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Hanken+Grotesk:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0c1f3d;--navy:#12305f;--navy-deep:#091a33;--brass:#b0832f;--brass-soft:#d9b66f;
+  --paper:#f6f2e9;--paper-2:#ede7d8;--white:#fffdf8;--muted:#56637a;
+  --line:rgba(12,31,61,.14);--line-strong:rgba(12,31,61,.3);
+  --ok:#2f6b3f;--warn:#9a6a10;--bad:#a23b2a;
+  --serif:'Newsreader',Georgia,serif;--sans:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;--bn:'Hind Siliguri',sans-serif;--bn-serif:'Noto Serif Bengali',serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.app{display:grid;grid-template-columns:240px 1fr;min-height:100vh}
+
+/* sidebar */
+aside{background:var(--navy-deep);color:#c3cfe5;padding:22px 16px;display:flex;flex-direction:column;gap:26px;position:sticky;top:0;height:100vh}
+.brand{display:flex;gap:12px;align-items:center;padding:0 8px;color:#fff}
+.brand svg{width:34px;height:34px}
+.brand b{letter-spacing:.2em;font-size:14px;display:block;line-height:1}
+.brand small{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#7f93b6;margin-top:5px}
+aside nav{display:grid;gap:2px}
+aside nav button{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:3px;cursor:pointer;color:#c3cfe5;font-weight:500;font-size:14.5px}
+aside nav button:hover{background:rgba(255,255,255,.06);color:#fff}
+aside nav button[aria-current="page"]{background:rgba(217,182,111,.14);color:#fff;box-shadow:inset 2px 0 0 var(--brass-soft)}
+aside nav .badge{font-size:11px;background:var(--brass);color:#1a1204;font-weight:700;border-radius:100px;padding:1px 8px}
+aside .who{margin-top:auto;border-top:1px solid rgba(255,255,255,.12);padding:16px 8px 0;display:flex;gap:12px;align-items:center;font-size:13px}
+.av{width:34px;height:34px;border-radius:50%;background:var(--brass);color:#1a1204;display:grid;place-items:center;font-weight:700;flex:none}
+aside .who small{display:block;color:#7f93b6;font-size:11.5px}
+.sample-tag{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7f93b6;padding:0 8px}
+
+/* main */
+main{padding:0 clamp(18px,3vw,40px) 60px;min-width:0}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(246,242,233,.94);backdrop-filter:blur(10px);z-index:5}
+.top h1{font-family:var(--serif);font-weight:400;font-size:1.9rem;margin:0;letter-spacing:-.015em}
+.top .acts{display:flex;gap:10px;align-items:center}
+.menu{display:none}
+.btn{border:0;background:var(--navy);color:#fff;padding:10px 16px;border-radius:2px;font-weight:600;font-size:14px;display:inline-flex;gap:8px;align-items:center}
+.btn:hover{background:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line-strong)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.btn.brass{background:var(--brass);color:#fff}
+.btn.sm{padding:6px 12px;font-size:13px}
+.search{background:var(--white);border:1px solid var(--line-strong);border-radius:2px;padding:9px 12px;font:inherit;width:240px}
+.view{display:none;padding-top:26px}
+.view.on{display:block}
+h2{font-family:var(--serif);font-weight:400;font-size:1.35rem;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 18px;font-size:14px}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:3px}
+.panel>header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
+.panel>header h3{margin:0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
+.stat{background:var(--white);border:1px solid var(--line);border-radius:3px;padding:18px 20px}
+.stat small{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.stat b{display:block;font-family:var(--serif);font-weight:400;font-size:2.4rem;line-height:1.1;margin:6px 0 2px;letter-spacing:-.02em}
+.stat span{font-size:13px;color:var(--muted)}
+.stat span.up{color:var(--ok)}
+.cols{display:grid;grid-template-columns:1.25fr 1fr;gap:14px}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:14px 20px;border-bottom:1px solid var(--line);align-items:center}
+.list li:last-child{border-bottom:0}
+.list b{font-weight:600}
+.list small{color:var(--muted)}
+.pill{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:100px;border:1px solid var(--line-strong);white-space:nowrap}
+.pill.ok{color:var(--ok);border-color:rgba(47,107,63,.4);background:rgba(47,107,63,.08)}
+.pill.warn{color:var(--warn);border-color:rgba(154,106,16,.4);background:rgba(154,106,16,.08)}
+.pill.new{color:#fff;background:var(--navy);border-color:var(--navy)}
+.pill.bad{color:var(--bad);border-color:rgba(162,59,42,.4)}
+
+/* table */
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:12px 20px;border-bottom:1px solid var(--line)}
+td{padding:14px 20px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:0}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--paper)}
+td .t{font-weight:600}
+td small{display:block;color:var(--muted)}
+.cov{display:flex;gap:4px}
+.cov i{font-style:normal;font-size:11px;font-weight:700;border:1px solid var(--line-strong);border-radius:2px;padding:1px 6px;color:#9aa5b8}
+.cov i.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.cov i.bn.on{background:var(--brass);border-color:var(--brass);font-family:var(--bn)}
+
+/* editor */
+.editor{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:14px;align-items:start}
+.langtabs{display:flex;gap:0;border-bottom:1px solid var(--line);padding:0 12px;overflow:auto}
+.langtabs button{background:none;border:0;padding:14px 16px;font-weight:600;color:var(--muted);border-bottom:2px solid transparent;white-space:nowrap}
+.langtabs button[aria-selected="true"]{color:var(--ink);border-color:var(--brass)}
+.langtabs button .d{display:inline-block;width:7px;height:7px;border-radius:50%;margin-left:7px;background:#c8cfdb}
+.langtabs button .d.on{background:var(--ok)}
+.form{padding:22px 24px;display:grid;gap:20px}
+.f{display:grid;gap:7px}
+.f>label{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+input[type=text],select,textarea{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line-strong);border-radius:2px;padding:11px 12px;width:100%}
+textarea{min-height:110px;resize:vertical;line-height:1.6}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--brass);outline-offset:1px}
+.f.bn input,.f.bn textarea{font-family:var(--bn-serif);font-size:16.5px;line-height:1.8}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tb{display:flex;gap:4px;border:1px solid var(--line-strong);border-bottom:0;background:var(--paper-2);padding:6px;border-radius:2px 2px 0 0}
+.tb span{border:1px solid transparent;padding:3px 9px;font-size:13px;font-weight:700;border-radius:2px;cursor:default;color:#41506b}
+.tb span:hover{background:var(--white);border-color:var(--line)}
+.tb + textarea{border-radius:0 0 2px 2px}
+.secs{list-style:none;margin:0;padding:0;counter-reset:s}
+.secs li{counter-increment:s;display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.secs li::before{content:"0" counter(s);font-family:var(--serif);font-style:italic;color:var(--brass);font-size:1.1rem}
+.secs button{background:none;border:1px solid var(--line-strong);border-radius:2px;font-size:12px;font-weight:700;padding:3px 9px}
+.secs button.done{background:rgba(47,107,63,.1);border-color:rgba(47,107,63,.4);color:var(--ok)}
+.side .box{padding:18px 20px;border-bottom:1px solid var(--line);display:grid;gap:12px}
+.side .box:last-child{border-bottom:0}
+.side h4{margin:0;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.row{display:flex;justify-content:space-between;gap:10px;font-size:14px;align-items:center}
+.row span:first-child{color:var(--muted)}
+.save{display:grid;gap:8px}
+.save .btn{justify-content:center}
+.toast{position:fixed;right:22px;bottom:22px;background:var(--ink);color:#fff;padding:13px 18px;border-radius:3px;box-shadow:0 14px 40px -12px rgba(0,0,0,.5);transform:translateY(20px);opacity:0;pointer-events:none;transition:.3s;z-index:20;max-width:340px}
+.toast.on{transform:none;opacity:1}
+.back{background:none;border:0;color:var(--muted);font-weight:600;padding:0;margin-bottom:14px}
+.back:hover{color:var(--ink)}
+
+/* inbox */
+.inbox{display:grid;grid-template-columns:380px 1fr;min-height:540px}
+.inbox .l{border-right:1px solid var(--line)}
+.msg{padding:16px 20px;border-bottom:1px solid var(--line);cursor:pointer;display:grid;gap:3px}
+.msg:hover{background:var(--paper)}
+.msg[aria-current="true"]{background:var(--paper-2);box-shadow:inset 3px 0 0 var(--brass)}
+.msg .h{display:flex;justify-content:space-between;gap:8px}
+.msg b{font-weight:600}
+.msg small{color:var(--muted)}
+.msg p{margin:2px 0 0;color:#41506b;font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.msg.unread b::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--brass);margin-right:8px}
+.detail{padding:26px 30px;display:grid;gap:18px;align-content:start}
+.detail h3{font-family:var(--serif);font-weight:400;font-size:1.6rem;margin:0;letter-spacing:-.01em}
+.kv{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kv small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.quote{background:var(--paper);border-left:3px solid var(--brass);padding:14px 18px;color:#2b3b57}
+.acts2{display:flex;gap:10px;flex-wrap:wrap}
+
+/* assessments / users */
+.week{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
+.day{border-right:1px solid var(--line);min-height:300px;padding:14px 12px}
+.day:last-child{border-right:0}
+.day h5{margin:0 0 12px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.slot{border:1px solid var(--line-strong);background:var(--paper);border-left:3px solid var(--navy);padding:8px 10px;border-radius:2px;margin-bottom:8px;font-size:13px;line-height:1.35}
+.slot b{display:block;font-weight:600}
+.slot.bnl{border-left-color:var(--brass)}
+.slot.free{background:transparent;border-style:dashed;color:var(--muted);border-left-color:var(--line-strong)}
+.perm td:not(:first-child){text-align:center}
+.perm th:not(:first-child){text-align:center}
+.tick{color:var(--ok);font-weight:700}.dash{color:#b3bccb}
+
+@media (max-width:1100px){.stats{grid-template-columns:1fr 1fr}.cols,.editor{grid-template-columns:1fr}.inbox{grid-template-columns:1fr}.inbox .l{border-right:0;border-bottom:1px solid var(--line)}}
+@media (max-width:820px){
+  .app{grid-template-columns:1fr}
+  aside{position:fixed;inset:0 auto 0 0;width:260px;z-index:30;transform:translateX(-100%);transition:.3s}
+  aside.open{transform:none}
+  .menu{display:inline-flex}
+  .search{display:none}
+  .week{grid-template-columns:1fr}.day{min-height:0;border-right:0;border-bottom:1px solid var(--line)}
+  .two,.kv{grid-template-columns:1fr}
+  table{display:block;overflow-x:auto}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark-light" viewBox="0 0 100 100">
+    <path fill="#fffdf8" d="M17 9h42c17 0 26 8 26 21 0 9-5 15-12 18 10 3 17 10 17 21 0 14-10 22-28 22H17z"/>
+    <g fill="none" stroke="#091a33" stroke-width="6.2" stroke-linejoin="round"><path d="M37 20v64"/><path d="M37 24h13c9 0 14 5 14 12.5S59 49 50 49H37"/></g>
+  </symbol>
+</svg>
+
+<div class="app">
+<aside id="side">
+  <div class="brand"><svg><use href="#mark-light"/></svg><div><b>BOROPOOL</b><small>Admin</small></div></div>
+  <nav id="nav" aria-label="Admin">
+    <button data-v="overview" aria-current="page">Overview</button>
+    <button data-v="guides">Career guides</button>
+    <button data-v="inbox">Enquiries <span class="badge" id="unread">3</span></button>
+    <button data-v="assess">Assessments</button>
+    <button data-v="team">Team &amp; roles</button>
+  </nav>
+  <div class="sample-tag">Preview · sample data</div>
+  <div class="who"><div class="av">AY</div><div>Sample Administrator<small>Administrator</small></div></div>
+</aside>
+
+<main>
+  <div class="top">
+    <div style="display:flex;gap:12px;align-items:center">
+      <button class="btn ghost sm menu" id="menuBtn" aria-label="Menu">☰</button>
+      <h1 id="title">Overview</h1>
+    </div>
+    <div class="acts">
+      <input class="search" type="search" placeholder="Search guides, enquiries…" aria-label="Search">
+      <button class="btn" id="newGuide">New guide</button>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="view on" id="v-overview">
+    <div class="stats">
+      <div class="stat"><small>New enquiries</small><b>14</b><span class="up">▲ 5 vs last week</span></div>
+      <div class="stat"><small>Assessments booked</small><b>9</b><span>4 this week · 5 next</span></div>
+      <div class="stat"><small>Guides published</small><b>6</b><span>2 drafts in progress</span></div>
+      <div class="stat"><small>Guides in Bangla</small><b>2</b><span>of 6 · 4 awaiting translation</span></div>
+    </div>
+    <div class="cols">
+      <div class="panel">
+        <header><h3>Latest enquiries</h3><button class="btn ghost sm" data-go="inbox">Open inbox</button></header>
+        <ul class="list" id="latest"></ul>
+      </div>
+      <div class="panel">
+        <header><h3>Needs attention</h3></header>
+        <ul class="list">
+          <li><span><b>Engineers in Germany</b><br><small>Draft · thresholds need yearly review</small></span><span class="pill warn">Review</span></li>
+          <li><span><b>Nurses in Australia</b><br><small>Bangla version not started</small></span><span class="pill warn">Translate</span></li>
+          <li><span><b>Caregivers in Canada</b><br><small>Updated 12 days ago · check official rules</small></span><span class="pill warn">Re-check</span></li>
+          <li><span><b>3 enquiries</b><br><small>No reply sent yet</small></span><button class="btn sm" data-go="inbox">Reply</button></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDES LIST -->
+  <section class="view" id="v-guides">
+    <h2>Career guides</h2>
+    <p class="sub">Create, edit and publish guides yourselves. Each guide holds one version per language.</p>
+    <div class="panel">
+      <table>
+        <thead><tr><th>Guide</th><th>Country</th><th>Languages</th><th>Status</th><th>Updated</th></tr></thead>
+        <tbody id="gTable"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- GUIDE EDITOR -->
+  <section class="view" id="v-editor">
+    <button class="back" data-go="guides">← All guides</button>
+    <div class="editor">
+      <div class="panel">
+        <div class="langtabs" role="tablist" id="ltabs"></div>
+        <div class="form" id="eForm">
+          <div class="two">
+            <div class="f"><label for="eTitle">Guide title</label><input id="eTitle" type="text"></div>
+            <div class="f"><label for="eSlug">Web address</label><input id="eSlug" type="text"></div>
+          </div>
+          <div class="f"><label for="eLead">Introduction</label>
+            <div class="tb" aria-hidden="true"><span>B</span><span><i>I</i></span><span>H2</span><span>• List</span><span>Link</span><span>Table</span><span>Image</span></div>
+            <textarea id="eLead"></textarea></div>
+          <div class="f"><label for="eNote">“Realistic expectations” note</label><textarea id="eNote" style="min-height:80px"></textarea></div>
+          <div class="f"><label>The eight sections</label>
+            <ul class="secs" id="secs"></ul></div>
+        </div>
+      </div>
+      <div class="panel side">
+        <div class="box"><h4>Publish</h4>
+          <div class="row"><span>Status</span><span class="pill" id="eStatus">Draft</span></div>
+          <div class="row"><span>Last saved</span><span id="eSaved">—</span></div>
+          <div class="save"><button class="btn brass" id="pub">Publish this version</button><button class="btn ghost" id="draft">Save draft</button></div>
+        </div>
+        <div class="box"><h4>Details</h4>
+          <div class="f"><label for="eProf">Profession</label><select id="eProf"><option>Nurses</option><option>Caregivers</option><option>Engineers</option><option>Skilled trades</option><option>Students</option></select></div>
+          <div class="f"><label for="eCountry">Country</label><select id="eCountry"><option>Canada</option><option>Germany</option><option>Poland</option><option>Australia</option></select></div>
+        </div>
+        <div class="box"><h4>Language coverage</h4><div id="eCov" class="cov"></div>
+          <small style="color:var(--muted)">Translators can be given access to one language only.</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INBOX -->
+  <section class="view" id="v-inbox">
+    <h2>Enquiries</h2>
+    <p class="sub">Everything sent through the website forms and WhatsApp button, in one place.</p>
+    <div class="panel inbox">
+      <div class="l" id="mList"></div>
+      <div class="detail" id="mDetail"></div>
+    </div>
+  </section>
+
+  <!-- ASSESSMENTS -->
+  <section class="view" id="v-assess">
+    <h2>Assessment bookings</h2>
+    <p class="sub">Week view in Dhaka time. Open slots are what visitors can choose on the website.</p>
+    <div class="panel">
+      <header><h3>This week</h3><div class="cov"><i class="on">English</i><i class="on bn">বাংলা</i></div></header>
+      <div class="week">
+        <div class="day"><h5>Sunday</h5><div class="slot"><b>10:00 · Sample Nurse</b>Canada, Germany · Phone</div><div class="slot bnl"><b>15:00 · Sample Caregiver</b>Canada · বাংলা</div></div>
+        <div class="day"><h5>Monday</h5><div class="slot bnl"><b>11:00 · Sample Applicant</b>Germany · বাংলা</div><div class="slot free">16:00 · Blocked</div></div>
+        <div class="day"><h5>Tuesday</h5><div class="slot free">10:00 · Open</div><div class="slot"><b>14:00 · Sample Engineer</b>Germany · English</div></div>
+        <div class="day"><h5>Wednesday</h5><div class="slot free">11:00 · Blocked</div></div>
+        <div class="day"><h5>Thursday</h5><div class="slot"><b>12:00 · Sample Student</b>Canada · English</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="view" id="v-team">
+    <h2>Team &amp; roles</h2>
+    <p class="sub">Give people only the access they need.</p>
+    <div class="panel">
+      <table class="perm">
+        <thead><tr><th>Permission</th><th>Administrator</th><th>Editor</th><th>Translator</th><th>Adviser</th></tr></thead>
+        <tbody>
+          <tr><td>Write and edit guides</td><td class="tick">✓</td><td class="tick">✓</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>Translate guides (own language)</td><td class="tick">✓</td><td class="tick">✓</td><td class="tick">✓</td><td class="dash">—</td></tr>
+          <tr><td>Publish and unpublish</td><td class="tick">✓</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td></tr>
+          <tr><td>Read and reply to enquiries</td><td class="tick">✓</td><td class="dash">—</td><td class="dash">—</td><td class="tick">✓</td></tr>
+          <tr><td>Manage assessment calendar</td><td class="tick">✓</td><td class="dash">—</td><td class="dash">—</td><td class="tick">✓</td></tr>
+          <tr><td>Add and remove team members</td><td class="tick">✓</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const SECTIONS=['Where the demand is','Salary and cost of living','Qualification recognition','Registration and licensing','Language tests','Exams and training','The visa pathway','Total cost, end to end'];
+const LANGS=[['en','English'],['bn','বাংলা'],['hi','हिन्दी'],['ur','اردو'],['ne','नेपाली'],['ta','தமிழ்'],['si','සිංහල'],['ps','پښتو'],['dv','ދިވެހި']];
+
+const guides=[
+ {id:0,title:'Nurses in Germany',slug:'nurses-germany',prof:'Nurses',country:'Germany',status:'Published',upd:'2 days ago',langs:['en','bn'],done:[1,0,1,1,1,0,1,0],
+  t:{en:'Nurses in Germany',bn:'জার্মানিতে নার্স হিসেবে কাজ: ধাপে ধাপে গাইড'},
+  lead:{en:'Germany recruits foreign nurses for hospitals and care homes. The route usually combines three things: recognition of your nursing qualification, German language at B2 level, and a work or recognition visa.',bn:'জার্মানির হাসপাতাল ও কেয়ার হোমে বিদেশি নার্সদের চাহিদা রয়েছে। সাধারণত এই পথে তিনটি বিষয় একসঙ্গে এগোয়: আপনার নার্সিং যোগ্যতার স্বীকৃতি, জার্মান ভাষায় B2 স্তরের দক্ষতা এবং কাজের বা স্বীকৃতির ভিসা।'},
+  note:{en:'Recognition decisions and timelines depend on the state authority and on your documents. We plan with ranges and risks, not promises.',bn:'স্বীকৃতির সিদ্ধান্ত ও সময় সংশ্লিষ্ট রাজ্যের কর্তৃপক্ষ এবং আপনার কাগজপত্রের ওপর নির্ভর করে। আমরা প্রতিশ্রুতি দিই না; বাস্তবসম্মত সীমা ও ঝুঁকি ধরে পরিকল্পনা করি।'}},
+ {id:1,title:'Caregivers in Canada',slug:'caregivers-canada',prof:'Caregivers',country:'Canada',status:'Published',upd:'12 days ago',langs:['en','bn'],done:[1,0,1,0,1,0,1,0],
+  t:{en:'Caregivers in Canada',bn:'কানাডায় কেয়ারগিভার: পথ ও প্রস্তুতি'},
+  lead:{en:'Canada’s caregiver immigration programmes have changed several times in recent years. Before you spend anything, confirm which programme is open today and whether your profile fits it.',bn:'কানাডার কেয়ারগিভার ইমিগ্রেশন কর্মসূচি সাম্প্রতিক বছরগুলোতে একাধিকবার বদলেছে। কোনো খরচ করার আগে প্রথম কাজ হলো দেখে নেওয়া আজ কোন কর্মসূচি চালু আছে।'},
+  note:{en:'Never pay for a “guaranteed” job offer.',bn:'“নিশ্চিত” চাকরির প্রস্তাবের জন্য কখনো টাকা দেবেন না।'}},
+ {id:2,title:'Engineers in Germany',slug:'engineers-germany',prof:'Engineers',country:'Germany',status:'Draft',upd:'Today',langs:['en'],done:[1,0,1,0,0,0,1,0],
+  t:{en:'Engineers in Germany'},lead:{en:'Engineers usually enter Germany through the EU Blue Card or a skilled-worker route.'},note:{en:'Thresholds and rules are updated regularly. We confirm current figures before you rely on them.'}},
+ {id:3,title:'Skilled trades in Poland',slug:'trades-poland',prof:'Skilled trades',country:'Poland',status:'Published',upd:'3 weeks ago',langs:['en'],done:[1,0,0,0,0,0,1,0],
+  t:{en:'Skilled trades in Poland'},lead:{en:'Poland hires skilled tradespeople through employer-sponsored work permits.'},note:{en:'If an agent asks for large payments before a verified offer exists, stop and speak to us first.'}},
+ {id:4,title:'Nurses in Australia',slug:'nurses-australia',prof:'Nurses',country:'Australia',status:'Published',upd:'1 month ago',langs:['en'],done:[1,0,1,1,1,0,1,0],
+  t:{en:'Nurses in Australia'},lead:{en:'Nursing in Australia runs through registration with the national regulator before you can practise.'},note:{en:'Requirements differ by state and change over time.'}},
+ {id:5,title:'Master’s study in Canada',slug:'masters-canada',prof:'Students',country:'Canada',status:'Draft',upd:'Yesterday',langs:['en'],done:[1,0,0,0,1,0,1,0],
+  t:{en:'Master’s study in Canada'},lead:{en:'A Canadian study permit begins with an admission letter from a designated institution.'},note:{en:'Study-permit rules have tightened. We check current limits before you pay any deposit.'}}
+];
+
+const mails=[
+ {n:'Sample Applicant A',w:'WhatsApp',t:'09:12',sub:'Nurse, 6 years — which route to Germany?',body:'I am a BSc nurse with six years of experience in a Dhaka hospital. I want to know whether Germany is realistic for me and how long German study usually takes.',prof:'Nurse',dest:'Germany',lang:'বাংলা',u:true,st:'New'},
+  {n:'Sample Applicant B',w:'Website form',t:'08:40',sub:'Caregiver programme in Canada',body:'I saw your guide. Is the caregiver programme currently open? I have two years of experience and IELTS preparation underway.',prof:'Caregiver',dest:'Canada',lang:'English',u:true,st:'New'},
+  {n:'Sample Applicant C',w:'Assessment request',t:'Yesterday',sub:'Assessment: Engineer, 8 years',body:'Requesting an initial assessment for Germany or Poland. Mechanical engineer, BSc from a Bangladeshi university.',prof:'Engineer',dest:'Germany, Poland',lang:'English',u:true,st:'New'},
+  {n:'Sample Applicant D',w:'Website form',t:'Yesterday',sub:'Agent asked me for a large payment',body:'An agent has asked for a payment before showing any job offer. Can you check whether this is normal?',prof:'Skilled trade',dest:'Poland',lang:'বাংলা',u:false,st:'Replied'},
+  {n:'Sample Applicant E',w:'WhatsApp',t:'Mon',sub:'Master’s in Canada — funds question',body:'How much proof of funds should I show for a Master’s programme?',prof:'Student',dest:'Canada',lang:'English',u:false,st:'Closed'}
+];
+
+/* navigation */
+const titles={overview:'Overview',guides:'Career guides',inbox:'Enquiries',assess:'Assessments',team:'Team & roles',editor:'Edit guide'};
+function go(v){
+  $$('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+v));
+  $$('#nav button').forEach(b=>b.toggleAttribute('aria-current',b.dataset.v===(v==='editor'?'guides':v)));
+  $$('#nav button').forEach(b=>{if(b.dataset.v!==(v==='editor'?'guides':v)) b.removeAttribute('aria-current'); else b.setAttribute('aria-current','page')});
+  $('#title').textContent=titles[v]; $('#side').classList.remove('open'); window.scrollTo(0,0);
+}
+$$('#nav button').forEach(b=>b.addEventListener('click',()=>go(b.dataset.v)));
+document.addEventListener('click',e=>{const g=e.target.closest('[data-go]'); if(g) go(g.dataset.go)});
+$('#menuBtn').addEventListener('click',()=>$('#side').classList.toggle('open'));
+function toast(m){const t=$('#toast'); t.textContent=m; t.classList.add('on'); clearTimeout(toast.t); toast.t=setTimeout(()=>t.classList.remove('on'),2600)}
+
+/* overview latest */
+$('#latest').innerHTML=mails.slice(0,4).map((m,i)=>`<li><span><b>${m.n}</b><br><small>${m.sub}</small></span><span class="pill ${m.st==='New'?'new':m.st==='Replied'?'ok':''}">${m.st}</span></li>`).join('');
+
+/* guides table */
+function covHTML(langs){return LANGS.map(([c,l])=>`<i class="${langs.includes(c)?'on':''} ${c==='bn'?'bn':''}">${c==='bn'?'বাংলা':c.toUpperCase()}</i>`).join('')}
+function renderGuides(){
+  $('#gTable').innerHTML=guides.map(g=>`<tr data-id="${g.id}"><td><span class="t">${g.title}</span><small>${g.prof}</small></td><td>${g.country}</td><td><div class="cov">${covHTML(g.langs)}</div></td><td><span class="pill ${g.status==='Published'?'ok':'warn'}">${g.status}</span></td><td>${g.upd}</td></tr>`).join('');
+  $$('#gTable tr').forEach(r=>r.addEventListener('click',()=>openEditor(+r.dataset.id)));
+}
+renderGuides();
+
+/* editor */
+let cg=null, cl='en';
+function openEditor(id){
+  cg = id==='new' ? newGuide() : guides.find(g=>g.id===id);
+  cl='en'; paintEditor(); go('editor');
+}
+function newGuide(){
+  const g={id:guides.length,title:'Untitled guide',slug:'untitled-guide',prof:'Nurses',country:'Canada',status:'Draft',upd:'Just now',langs:['en'],done:[0,0,0,0,0,0,0,0],t:{en:''},lead:{en:''},note:{en:''}};
+  guides.unshift(g); renderGuides(); return g;
+}
+function paintEditor(){
+  $('#ltabs').innerHTML=LANGS.map(([c,l])=>`<button role="tab" data-l="${c}" aria-selected="${c===cl}">${l}<span class="d ${cg.langs.includes(c)?'on':''}"></span></button>`).join('');
+  $$('#ltabs button').forEach(b=>b.addEventListener('click',()=>{saveFields(); cl=b.dataset.l; paintEditor()}));
+  const bn=cl==='bn';
+  ['#eTitle','#eLead','#eNote'].forEach(s=>$(s).closest('.f').classList.toggle('bn',bn));
+  const rtl=['ur','ps','dv'].includes(cl);
+  ['#eTitle','#eLead','#eNote'].forEach(s=>{$(s).dir=rtl?'rtl':'ltr'});
+  $('#eTitle').value=cg.t[cl]||''; $('#eLead').value=cg.lead[cl]||''; $('#eNote').value=cg.note[cl]||'';
+  $('#eTitle').placeholder=cg.langs.includes(cl)?'':'Not started in this language';
+  $('#eSlug').value=cg.slug; $('#eProf').value=cg.prof; $('#eCountry').value=cg.country;
+  $('#secs').innerHTML=SECTIONS.map((s,i)=>`<li><span>${s}</span><button type="button" class="${cg.done[i]?'done':''}" data-i="${i}">${cg.done[i]?'Written':'Write'}</button></li>`).join('');
+  $$('#secs button').forEach(b=>b.addEventListener('click',()=>{const i=+b.dataset.i; cg.done[i]=cg.done[i]?0:1; paintEditor(); toast(cg.done[i]?'Section marked as written (sample)':'Section reopened')}));
+  $('#eStatus').textContent=cg.status; $('#eStatus').className='pill '+(cg.status==='Published'?'ok':'warn');
+  $('#eSaved').textContent=cg.upd; $('#eCov').innerHTML=covHTML(cg.langs);
+}
+function saveFields(){
+  cg.t[cl]=$('#eTitle').value; cg.lead[cl]=$('#eLead').value; cg.note[cl]=$('#eNote').value;
+  cg.slug=$('#eSlug').value; cg.prof=$('#eProf').value; cg.country=$('#eCountry').value;
+  if(cg.t[cl] && !cg.langs.includes(cl)) cg.langs.push(cl);
+  if(cl==='en' && cg.t.en) cg.title=cg.t.en;
+}
+$('#draft').addEventListener('click',()=>{saveFields(); cg.upd='Just now'; renderGuides(); paintEditor(); toast('Draft saved')});
+$('#pub').addEventListener('click',()=>{saveFields(); cg.status='Published'; cg.upd='Just now'; renderGuides(); paintEditor(); toast('Published — in the live site this goes online instantly')});
+$('#newGuide').addEventListener('click',()=>openEditor('new'));
+
+/* inbox */
+let cm=0;
+function renderInbox(){
+  $('#mList').innerHTML=mails.map((m,i)=>`<div class="msg ${m.u?'unread':''}" data-i="${i}" ${i===cm?'aria-current="true"':''}><div class="h"><b>${m.n}</b><small>${m.t}</small></div><small>${m.w}</small><p>${m.sub}</p></div>`).join('');
+  $$('#mList .msg').forEach(x=>x.addEventListener('click',()=>{cm=+x.dataset.i; mails[cm].u=false; renderInbox()}));
+  const m=mails[cm];
+  $('#mDetail').innerHTML=`<div><span class="pill ${m.st==='New'?'new':m.st==='Replied'?'ok':''}">${m.st}</span></div>
+   <h3>${m.sub}</h3>
+   <div class="kv"><div><small>From</small>${m.n}</div><div><small>Channel</small>${m.w}</div><div><small>Preferred language</small>${m.lang}</div><div><small>Profession</small>${m.prof}</div><div><small>Destination</small>${m.dest}</div><div><small>Received</small>${m.t}</div></div>
+   <div class="quote">${m.body}</div>
+   <div class="acts2"><button class="btn" data-a="Replied">Reply on WhatsApp</button><button class="btn ghost" data-a="Booked">Book assessment</button><button class="btn ghost" data-a="Closed">Close</button></div>`;
+  $$('#mDetail [data-a]').forEach(b=>b.addEventListener('click',()=>{m.st=b.dataset.a==='Booked'?'Replied':b.dataset.a; renderInbox(); toast(b.dataset.a==='Booked'?'Opening the assessment calendar (sample)':'Marked '+m.st.toLowerCase())}));
+  const n=mails.filter(x=>x.u).length; $('#unread').textContent=n; $('#unread').style.display=n?'':'none';
+}
+renderInbox();
+</script>
+</body>
+</html>
